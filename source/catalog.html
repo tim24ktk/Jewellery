@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="decoration, please your loved ones, Jewellery, best jewelry, jewelry for every taste">
+  <title>Jewellery</title>
+  <link rel="preload" href="fonts/poppins-v15-latin-regular.woff2" as="font">
+  <link rel="preload" href="fonts/cormorant-garamond-v9-latin-regular.woff2" as="font">
+  <link href="css/styles.min.css" rel="stylesheet">
+</head>
+
+<body class="body">
+  <div class="visually-hidden">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+  <header class="main-header">
+    <div class="header-top">
+      <form class="form-search" action="https://echo.htmlacademy.ru" method="get">
+        <label for="search-id" aria-label="product search form">Search form</label>
+        <input type="search" id="search-id" name="search" placeholder="Type here to search">
+        <button type="submit" tabindex="0" aria-label="search button">
+          <span class="vissually-hidden">Search</span>
+          <svg role="img" aria-label="Search button" width="14" height="14">
+            <use xlink:href="#icon-search"></use>
+          </svg>
+        </button>
+      </form>
+      <a href="index.html" class="logo">
+        <svg role="img" aria-label="Logo" width="66" height="66">
+          <use xlink:href="#icon-logo"></use>
+        </svg>
+      </a>
+      <ul class="user-navigation">
+        <li class="user-navigation__item">
+          <a href="#" class="user-navigation__item-link">
+            Login
+          </a>
+        </li>
+        <li class="user-navigation__item">
+          <a href="#" class="user-navigation__item-link">
+            <span class="user-navigation__cart">Cart</span>
+            <span class="user-navigation__cart-count">0</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <nav class="main-nav">
+      <ul class="site-navigation">
+        <li class="site-navigation__item">
+          <a href="#" class="site-navigation__item-link">What’s new</a>
+        </li>
+        <li class="site-navigation__item">
+          <a href="#" class="site-navigation__item-link">Chokers</a>
+        </li>
+        <li class="site-navigation__item">
+          <a href="#" class="site-navigation__item-link">Necklaces</a>
+        </li>
+        <li class="site-navigation__item">
+          <a href="#" class="site-navigation__item-link">Rings</a>
+        </li>
+        <li class="site-navigation__item">
+          <a href="#" class="site-navigation__item-link">Earrings</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1 class="visually-hidden">Jewellery</h1>
+    <section class="promo">
+      <h2 class="promo__title">All Jewellery</h2>
+      <p class="promo__description">Discover picks of fashion's finest trends in our jewellery catalog</p>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="sign-up">
+      <h2 class="sign-up__title">The good stuff in your inbox </h2>
+      <p class="sign-up__description">News and updates from CH. No spam, we promise.</p>
+      <form class="sign-up__form" action="https://echo.htmlacademy.ru" method="get">
+        <input type="text" name="register" id="sign-up" placeholder="Your E-mail">
+        <label class="visually-hidden" for="sign-up">Sign-up</label>
+        <button type="submit" aria-label="sign-up">
+          <span>Sign-up</span>
+          <svg role="img" width="30" height="11">
+            <use xlink:href="#icon-arrow"></use>
+          </svg>
+        </button>
+      </form>
+    </div>
+    <ul class="footer-navigation">
+      <li class="footer-navigation__item">
+        <a href="#" class="footer-navigation__item-link">Ordering & Payment</a>
+        <a href="#" class="footer-navigation__item-link">Ordering & Payment</a>
+        <a href="#" class="footer-navigation__item-link">Returns & Exchanges</a>
+        <a href="#" class="footer-navigation__item-link">Delivery</a>
+      </li>
+      <li class="footer-navigation__item">
+        <a href="#" class="footer-navigation__item-link">About CH</a>
+        <a href="#" class="footer-navigation__item-link">Stores & Hours</a>
+        <a href="#" class="footer-navigation__item-link">Jobs</a>
+        <a href="#" class="footer-navigation__item-link">Contact Us</a>
+      </li>
+    </ul>
+    <ul class="social-list">
+      <li class="social-list__item">
+        <a href="https://facebook.com/" class="social-list__item-link">Facebook</a>
+      </li>
+      <li class="social-list__item">
+        <a href="https://www.instagram.com/" class="social-list__item-link">Instagram</a>
+      </li>
+      <li class="social-list__item">
+        <a href="https://www.pinterest.ru/" class="social-list__item-link">Pinterest</a>
+      </li>
+      <li class="social-list__item">
+        <a href="https://twitter.com/" class="social-list__item-link">Twitter</a>
+      </li>
+    </ul>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

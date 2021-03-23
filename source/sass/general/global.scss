@@ -3,14 +3,14 @@
 }
 
 body {
-  font-family: "Poppins", "Arial", sans-serif;
+  font-family: $poppins;
   font-size: 16px;
-  font-weight: normal;
   line-height: 22px;
+  font-weight: 400;
   margin: 0;
   padding: 0;
-  color: $white;
-  background-color: $promo-background;
+  color: $basic-black;
+  background-color: $white;
 }
 
 a {
