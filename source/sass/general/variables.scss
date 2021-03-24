@@ -5,7 +5,13 @@ $desktop-width: 1024px;
 $retina-x2: 2dppx;
 
 $white: #ffffff;
+$white-transparent: rgba($white, 0.15);
+$white-transparent-link: rgba($white, 0.75);
 $basic-black: #000000;
+$logo-color: #a87b62;
+$placeholder-color: #9b9997;
+$link-color: #1d1613;
+$border-color: #f6f5f4;
 
 $poppins: "Poppins", "Arial", sans-serif;
 $cormorant-garamond:  "Cormorant Garamond", "Arial", serif;

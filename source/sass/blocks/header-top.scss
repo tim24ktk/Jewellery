@@ -1,0 +1,59 @@
+.header-top {
+  position: relative;
+  padding-bottom: 13px;
+
+  &::before {
+    position: absolute;
+    bottom: 0;
+    content: "";
+
+    @include size(100%, 1px);
+    background-color: $border-color;
+  }
+
+  @include tablet {
+    padding-bottom: 25px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  @include mobile {
+    padding-bottom: 14px;
+  }
+}
+
+.header-top__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.header-top__button {
+  display: none;
+
+  @include tablet {
+    @include btn-reset;
+    margin-top: 28px;
+    padding: 5px;
+    display: block;
+    align-self: center;
+    cursor: pointer;
+
+    svg {
+      stroke: $link-color;
+    }
+
+    &:hover,
+    &:focus {
+      svg {
+        stroke: $logo-color;
+      }
+    }
+  }
+
+  @include mobile {
+    margin-top: 18px;
+  }
+}

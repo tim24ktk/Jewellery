@@ -1,0 +1,33 @@
+.main-navigation {
+  @include reset_for_list;
+  margin: 0 auto;
+  margin-top: 24px;
+  width: 88.3%;
+
+  @include mobile {
+    margin-top: 14px;
+    width: 91%;
+  }
+}
+
+.main-navigation__item {
+  @include reset;
+  margin-bottom: 20px;
+  width: max-content;
+}
+
+.main-navigation__item-link {
+  @include reset;
+  display: flex;
+  align-items: center;
+  font-family: $poppins;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 130%;
+  color: $white-transparent-link;
+
+  &:hover,
+  &:focus {
+    color: $placeholder-color;
+  }
+}

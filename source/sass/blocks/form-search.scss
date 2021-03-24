@@ -1,0 +1,77 @@
+.form-search {
+  position: relative;
+  margin-top: 8px;
+  display: flex;
+  align-self: center;
+
+  input {
+    padding: 5px;
+    padding-left: 34px;
+    line-height: 17px;
+    border: none;
+
+    &::placeholder {
+      font-family: $poppins;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 14px;
+      display: flex;
+      align-items: center;
+      color: $placeholder-color;
+    }
+  }
+
+  button {
+    position: absolute;
+
+    @include btn-reset;
+    padding: 5px;
+    order: -1;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      opacity: 0.5;
+    }
+  }
+
+  @include tablet {
+    display: none;
+
+    &--main-menu {
+      display: flex;
+      align-items: center;
+      border-radius: 21px;
+      margin-top: 34px;
+
+      input {
+        margin: auto;
+        padding-top: 12px;
+        padding-right: 11px;
+        padding-bottom: 11px;
+        padding-left: 34px;
+        width: 98.7%;
+        background-color: $white-transparent;
+        border-radius: 21px;
+
+        @include mobile {
+          width: 97%;
+        }
+      }
+
+      svg {
+        @include size(16px, 16px);
+        fill: $white;
+      }
+
+      button {
+        margin-left: 12px;
+        margin-top: 3px;
+      }
+
+      @include mobile {
+        margin-top: 24px;
+      }
+    }
+  }
+}

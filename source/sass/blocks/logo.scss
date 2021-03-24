@@ -1,0 +1,35 @@
+.logo {
+  @include reset;
+  margin-top: 30px;
+  align-self: center;
+
+  &--main {
+    margin-right: 26px;
+    fill: $logo-color;
+
+    @include tablet {
+      margin-right: 7px;
+    }
+
+    @include mobile {
+      margin-top: 20px;
+
+      svg {
+        @include size(52px, 52px);
+      }
+    }
+  }
+
+  &--main-menu {
+    margin-right: 8px;
+    fill: $white;
+
+    @include mobile {
+      margin-top: 20px;
+
+      svg {
+        @include size(52px, 52px);
+      }
+    }
+  }
+}
