@@ -47,6 +47,10 @@
     }
   }
 
+  &--no-js {
+    display: none;
+  }
+
   @include mobile {
     margin-top: 18px;
   }

@@ -51,6 +51,10 @@
         stroke: $logo-color;
       }
     }
+
+    &--no-js {
+      display: none;
+    }
   }
 
   @include mobile {

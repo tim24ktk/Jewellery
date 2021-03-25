@@ -1,0 +1,109 @@
+.social-list {
+  @include reset_for_list;
+  margin-top: 1px;
+  margin-left: 4.8%;
+
+  @include tablet {
+    margin-top: 41px;
+    margin-left: 6%;
+  }
+
+  @include mobile {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.social-list__item {
+  @include reset;
+  margin-bottom: 11px;
+
+  @include tablet {
+    margin-bottom: 12px;
+  }
+
+  @include mobile {
+    margin-right: 20px;
+  }
+}
+
+.social-list__item:first-child {
+  padding-left: 5px;
+
+  @include mobile {
+    padding: 0;
+  }
+}
+
+.social-list__item-link {
+  @include reset;
+  padding: 5px;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  font-family: $poppins;
+  font-weight: 500;
+  font-size: 1.18vw;
+  line-height: 130%;
+  /* or 21px */
+  text-align: center;
+  color: $white;
+
+  svg {
+    margin-right: 15px;
+    fill: $white;
+  }
+
+
+  &:hover,
+  &:focus {
+    color: $logo-color;
+
+    svg {
+      fill: $logo-color;
+    }
+  }
+
+  @include tablet {
+    font-size: 2vw;
+
+    svg {
+      margin-right: 19px;
+    }
+  }
+
+  @include mobile {
+    span {
+      display: none;
+    }
+
+    svg {
+      margin-right: 0;
+    }
+
+    &--facebook {
+      svg {
+        @include size(12px, 21px);
+      }
+    }
+
+    &--instagram {
+      svg {
+        @include size(20px, 21px);
+      }
+    }
+
+    &--pinterest {
+      svg {
+        @include size(20px, 21px);
+      }
+    }
+
+    &--twitter {
+      svg {
+        @include size(20px, 18px);
+      }
+    }
+  }
+}

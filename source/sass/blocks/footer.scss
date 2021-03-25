@@ -1,0 +1,26 @@
+.footer {
+  padding-top: 89px;
+  padding-bottom: 74px;
+  background-color: $basic-black;
+
+  @include tablet {
+    padding-top: 49px;
+    padding-bottom: 33px;
+  }
+
+  @include mobile {
+    padding-bottom: 41px;
+  }
+}
+
+.footer__wrapper {
+  display: flex;
+
+  @include tablet {
+    flex-wrap: wrap;
+  }
+
+  @include mobile {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,147 @@
+.sign-up {
+  margin-left: 5px;
+  width: 42.5%;
+  display: flex;
+  flex-direction: column;
+  color: $white;
+
+  @include tablet {
+    width: 100%;
+  }
+}
+
+.sign-up__title {
+  @include reset;
+  display: flex;
+  align-items: center;
+  font-family: $cormorant-garamond;
+  font-weight: 700;
+  font-size: 2.48vw;
+  line-height: 130%;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: inherit;
+
+  span {
+    margin-right: 2px;
+    letter-spacing: 0.0002em;
+  }
+
+  @include tablet {
+    font-size: 4.42vw;
+  }
+
+  @include mobile {
+    width: 80%;
+    display: block;
+    text-align: left;
+    font-size: 34px;
+  }
+}
+
+.sign-up__description {
+  @include reset;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  font-family: $poppins;
+  font-weight: 400;
+  font-size: 1.175vw;
+  line-height: 130%;
+  text-align: center;
+  color: $placeholder-color;
+
+  @include tablet {
+    margin-top: 9px;
+    font-size: 2.09vw;
+  }
+
+  @include mobile {
+    margin-top: 14px;
+    width: 80%;
+    display: block;
+    text-align: left;
+    font-size: 16px;
+  }
+}
+
+.sign-up__form {
+  position: relative;
+  margin-top: 36px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid $white;
+
+  input {
+    padding-top: 8px;
+    padding-right: 120px;
+    padding-bottom: 7px;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-family: $poppins;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: $white;
+    background-color: $basic-black;
+    border: none;
+  }
+
+  &::placeholder {
+    font-family: $poppins;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: $placeholder-color;
+  }
+
+  button {
+    position: absolute;
+    right: 0;
+
+    @include btn-reset;
+    margin-bottom: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 110px;
+    font-family: $poppins;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    text-align: center;
+    color: $white;
+    cursor: pointer;
+
+    svg {
+      transform: rotate(180deg);
+      stroke: $white;
+    }
+
+    &:hover,
+    &:focus {
+      color: $logo-color;
+
+      svg {
+        stroke: $logo-color;
+      }
+    }
+
+    span {
+      padding: 5px;
+    }
+  }
+
+  @include tablet {
+    margin-top: 37px;
+    width: 82.21%;
+  }
+
+  @include mobile {
+    margin-top: 35px;
+    width: 97%;
+  }
+}
