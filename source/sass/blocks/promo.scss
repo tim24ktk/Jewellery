@@ -4,8 +4,8 @@
   background-image: url("../img/promo@1x.png");
   background-repeat: no-repeat;
   background-color: $logo-color;
-  background-size: cover;
-  filter: drop-shadow(0 4px 4px $white-drop-shadow);
+  background-size: 100% 34.9vw;
+  box-shadow: 0 4px 4px $white-drop-shadow;
 
   @include retina {
     background-image: url("../img/promo@2x.png");
@@ -14,7 +14,8 @@
   @include tablet {
     min-height: 60.3vw;
     background-image: url("../img/promo-tablet@1x.png");
-    filter: none;
+    background-size: 100% 60.9vw;
+    box-shadow: none;
 
     @include retina {
       background-image: url("../img/promo-tablet@2x.png");
@@ -24,6 +25,7 @@
   @include mobile {
     min-height: 144.8vw;
     background-image: url("../img/promo-mobile@1x.png");
+    background-size: 100% 144.9vw;
 
     @include retina {
       background-image: url("../img/promo-mobile@2x.png");
