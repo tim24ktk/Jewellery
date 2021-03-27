@@ -13,10 +13,10 @@
   height: $height;
 }
 
-@mixin font-size ($size, $line-height, $font-weight) {
+@mixin font-size ($size, $font-weight, $line-height) {
   font-size: $size;
-  line-height: $line-height;
   font-weight: $font-weight;
+  line-height: $line-height;
 }
 
 ///миксин сброса стилей для кнопок

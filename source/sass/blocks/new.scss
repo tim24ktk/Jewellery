@@ -1,0 +1,150 @@
+.new {
+  padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    padding-top: 70px;
+  }
+
+  @include mobile {
+    padding-top: 60px;
+  }
+}
+
+.new__container {
+  width: 90.5%;
+  margin: 0 auto;
+  padding-left: 11px;
+  padding-right: 11px;
+
+  @include tablet {
+    width: 96.5%;
+  }
+}
+
+.new__header {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.new__center {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  order: 2;
+
+  @include tablet {
+    margin-left: 0;
+  }
+
+  @include mobile {
+    margin: auto;
+  }
+}
+
+.new__title {
+  @include reset;
+  display: flex;
+  align-items: center;
+  font-family: $cormorant-garamond;
+
+  @include font-size (34px, 700, 130%);
+  text-align: center;
+  color: $link-color;
+}
+
+.new__link {
+  @include reset;
+  margin-top: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 81px;
+  font-family: $poppins;
+
+  @include font-size (16px, 500, 130%);
+  text-align: center;
+  color: $link-color;
+  border-bottom: 1px solid $logo-color;
+
+  &:hover,
+  &:focus {
+    color: $logo-color;
+    border-bottom: 1px solid $link-color;
+  }
+
+  @include tablet {
+    margin-top: 19px;
+    padding-bottom: 4px;
+  }
+}
+
+.new__left-button {
+  @include btn-reset;
+  margin-top: 3px;
+  padding: 5px;
+  align-self: center;
+  order: 1;
+  cursor: pointer;
+
+  svg {
+    stroke: $logo-color;
+
+    @include tablet {
+      @include size(37px, 15px);
+    }
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      stroke: $link-color;
+    }
+  }
+
+  @include tablet {
+    margin-top: 13px;
+    margin-left: 15px;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.new__right-button {
+  @include btn-reset;
+  margin-top: 12px;
+  margin-right: 15px;
+  padding: 5px;
+  align-self: center;
+  order: 3;
+  cursor: pointer;
+
+  svg {
+    stroke: $logo-color;
+    transform: rotate(180deg);
+
+    @include tablet {
+      @include size(37px, 15px);
+    }
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      stroke: $link-color;
+    }
+  }
+
+  @include tablet {
+    margin-top: 13px;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
