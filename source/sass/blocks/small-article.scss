@@ -1,0 +1,157 @@
+.small-article {
+  margin-left: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  height: 22vw;
+  background-color: $article-background;
+
+  img {
+    @include size(20.95vw, 22vw);
+    object-fit: cover;
+
+    @include tablet {
+      @include size(44.1vw, 39.1vw);
+    }
+
+    @include mobile {
+      @include size(91vw, 80vw);
+    }
+  }
+
+  &--reverse {
+    .small-article__wrapper {
+      order: -1;
+    }
+
+    @include mobile {
+      .small-article__wrapper {
+        order: 1;
+      }
+    }
+  }
+
+  @include tablet {
+    margin-bottom: 50px;
+
+    @include size(98.6%, 39.1vw);
+  }
+
+  @include mobile {
+    margin: 0 auto;
+    margin-bottom: 40px;
+    flex-direction: column;
+
+    @include size(96.4%, 160vw);
+  }
+}
+
+.small-article:last-child {
+  margin-bottom: 0;
+}
+
+.small-article__wrapper {
+  margin-top: -11px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 20.8vw;
+
+  time {
+    @include reset;
+    display: flex;
+    justify-content: center;
+    font-family: $poppins;
+
+    @include font-size(14px, 500, 130%);
+    text-align: center;
+    color: $placeholder-color;
+
+    @include mobile {
+      font-size: 4.3vw;
+    }
+  }
+
+  h3 {
+    @include reset;
+    margin: 0 auto;
+    margin-top: 13px;
+    width: 163px;
+    display: flex;
+    justify-content: center;
+    font-family: $cormorant-garamond;
+
+    @include font-size(26px, 600, 130%);
+    text-align: center;
+    color: $basic-black;
+
+    @include tablet {
+      margin-top: 12px;
+      padding-left: 4px;
+      width: 169px;
+    }
+
+    @include mobile {
+      margin-top: 14px;
+      padding-left: 0;
+      width: 52vw;
+      font-size: 8.1vw;
+    }
+  }
+
+  a {
+    position: relative;
+
+    @include reset;
+    margin-top: 38px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    font-family: $poppins;
+
+    @include font-size(16px, 500, 130%);
+    text-align: center;
+    color: $link-color;
+
+    &:hover,
+    &:focus {
+      color: $logo-color;
+
+      &::before {
+        background-color: $link-color;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      bottom: -5px;
+      right: auto;
+      left: auto;
+      content: "";
+      width: 98px;
+      height: 1px;
+      background-color: $logo-color;
+
+      @include mobile {
+        width: 30vw;
+      }
+    }
+
+    @include mobile {
+      font-size: 5vw;
+    }
+  }
+
+  @include tablet {
+    margin-top: -7px;
+    width: 44.1vw;
+  }
+
+  @include mobile {
+    margin: auto;
+    margin-top: 12vw;
+    width: 52.1vw;
+  }
+}

@@ -1,0 +1,246 @@
+.blog__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include tablet {
+    flex-direction: column;
+  }
+}
+
+.blog__title {
+  @include reset;
+  margin: 0 auto;
+  margin-top: 107px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $cormorant-garamond;
+
+  @include font-size(34px, 700, 130%);
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: $link-color;
+
+  @include tablet {
+    margin-top: 60px;
+  }
+
+  @include mobile {
+    margin-top: 48px;
+    font-size: 10.6vw;
+  }
+}
+
+.blog__link {
+  position: relative;
+
+  @include reset;
+  margin: 0 auto;
+  margin-top: 19px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $poppins;
+
+  @include font-size(16px, 500, 130%);
+  text-align: center;
+  color: $link-color;
+
+  &:hover,
+  &:focus {
+    color: $logo-color;
+
+    &::before {
+      background-color: $link-color;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    bottom: -5px;
+    right: auto;
+    left: auto;
+    content: "";
+    width: 64px;
+    height: 1px;
+    background-color: $logo-color;
+
+    @include tablet {
+      bottom: -4px;
+    }
+
+    @include mobile {
+      bottom: -5px;
+      width: 20vw;
+    }
+  }
+
+  @include tablet {
+    padding-right: 1px;
+    max-width: max-content;
+  }
+
+  @include mobile {
+    font-size: 5vw;
+  }
+}
+
+.blog__small-articles {
+  margin-top: 66px;
+  margin-right: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include tablet {
+    margin-top: 64px;
+    margin-right: 0;
+  }
+
+  @include mobile {
+    margin-top: 55px;
+  }
+}
+
+.blog__big-article {
+  position: relative;
+  margin-top: 66px;
+  margin-right: 5px;
+
+  @include size(41.7vw, 46.1vw);
+
+  img {
+    @include size(41.7vw, 46.1vw);
+
+    @include tablet {
+      @include size(44.1vw, 39.1vw);
+    }
+
+    @include mobile {
+      @include size(91.1vw, 80vw);
+    }
+  }
+
+  @include tablet {
+    position: inherit;
+    margin-top: 50px;
+    margin-right: 0;
+    margin-left: 5px;
+    display: flex;
+
+    @include size(98.6%, 39.1vw);
+    background-color: $article-background;
+  }
+
+  @include mobile {
+    margin: 0 auto;
+    margin-top: 40px;
+    flex-direction: column;
+
+    @include size(96.5%, 159.9vw);
+  }
+}
+
+.blog__big-article-wrapper {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+
+  @include size(20.9vw, 22vw);
+  background-color: $article-background;
+
+  time {
+    @include reset;
+    margin-top: -43px;
+    display: flex;
+    justify-content: center;
+    font-family: $poppins;
+
+    @include font-size(14px, 500, 130%);
+    text-align: center;
+    color: $placeholder-color;
+
+    @include mobile {
+      font-size: 4.32vw;
+    }
+  }
+
+  h3 {
+    @include reset;
+    margin: 0 auto;
+    margin-top: 13px;
+    width: 163px;
+    display: flex;
+    justify-content: center;
+    font-family: $cormorant-garamond;
+
+    @include font-size(26px, 600, 130%);
+    text-align: center;
+    color: $basic-black;
+
+    @include mobile {
+      font-size: 8vw;
+    }
+  }
+
+  a {
+    position: relative;
+
+    @include reset;
+
+    margin: 0 auto;
+    margin-top: 38px;
+    display: flex;
+    justify-content: center;
+    font-family: $poppins;
+
+    @include font-size(16px, 500, 130%);
+    text-align: center;
+    color: $link-color;
+
+    &:hover,
+    &:focus {
+      color: $logo-color;
+
+      &::before {
+        background-color: $link-color;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      bottom: -5px;
+      right: auto;
+      left: auto;
+      content: "";
+      width: 98px;
+      height: 1px;
+      background-color: $logo-color;
+
+      @include mobile {
+        width: 30vw;
+      }
+    }
+
+    @include mobile {
+      font-size: 5vw;
+    }
+  }
+
+  @include tablet {
+    position: inherit;
+    margin: 0 auto;
+    margin-top: 82px;
+  }
+
+  @include mobile {
+    @include size(55.9vw, 36vw);
+  }
+}

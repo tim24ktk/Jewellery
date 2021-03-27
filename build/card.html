@@ -160,83 +160,98 @@
   <main>
     <h1 class="visually-hidden">Jewellery</h1>
     <section class="new">
-      <div class="new__header">
-        <div class="new__center">
-          <h2 class="new__title">You May Also Like</h2>
-          <a href="#" class="new__link">Shop Now</a>
+      <div class="new__container">
+        <div class="new__header">
+          <div class="new__center">
+            <h2 class="new__title">You May Also Like</h2>
+            <a href="catalog.html" class="new__link">Shop Now</a>
+          </div>
+          <button class="new__left-button" type="button" aria-label="Slide left">
+            <span class="visually-hidden">Slide left</span>
+            <svg role="img" width="30" height="11">
+              <use xlink:href="#icon-arrow"></use>
+            </svg>
+          </button>
+          <button class="new__right-button" type="button" aria-label="Slide right">
+            <span class="visually-hidden">Slide right</span>
+            <svg role="img" width="30" height="11">
+              <use xlink:href="#icon-arrow"></use>
+            </svg>
+          </button>
         </div>
-        <button class="new__left-button" type="button" aria-label="Slide left">
-          <span class="visually-hidden">Slide left</span>
-          <svg role="img" width="30" height="11">
-            <use xlink:href="#icon-arrow"></use>
-          </svg>
-        </button>
-        <button class="new__right-button" type="button" aria-label="Slide right">
-          <span class="visually-hidden">Slide right</span>
-          <svg role="img" width="30" height="11">
-            <use xlink:href="#icon-arrow"></use>
-          </svg>
-        </button>
       </div>
-      <ul class="products-list">
-        <li class="products-list__item">
-          <a href="#" class="products-list__item-link">
-            <picture>
-              <source srcset="img/purple-gemstone-necklace-desktop@1x.webp 1x, img/purple-gemstone-necklace-desktop@2x.webp 2x" type="image/webp">
-              <!--1x: 270*284; 2x: 540*568-->
-              <img src="img/purple-gemstone-necklace-desktop@1x.png" srcset="img/purple-gemstone-necklace-desktop@2x.png 2x" width="270" height="284" alt="Necklace with amethyst">
-            </picture>
-            <h2 class="products-list__item-title">Necklace with amethyst</h2>
-            <p class="products-list__item-price">$ 145</p>
-          </a>
-        </li>
-        <li class="products-list__item">
-          <a href="#" class="products-list__item-link">
-            <picture>
-              <source srcset="img/layered-choker-necklace@1x.webp 1x, img/layered-choker-necklace@2x.webp 2x" type="image/webp">
-              <!--1x: 270*284; 2x: 540*568-->
-              <img src="img/layered-choker-necklace@1x.png" srcset="img/layered-choker-necklace@2x.png 2x" width="270" height="284" alt="Layered сhoker">
-            </picture>
-            <h2 class="products-list__item-title">Layered сhoker</h2>
-            <p class="products-list__item-price">$ 115</p>
-          </a>
-        </li>
-        <li class="products-list__item">
-          <a href="#" class="products-list__item-link">
-            <picture>
-              <source srcset="img/dainty-gold-necklace@1x.webp 1x, img/dainty-gold-necklace@2x.webp 2x" type="image/webp">
-              <!--1x: 270*284; 2x: 540*568-->
-              <img src="img/dainty-gold-necklace@1x.png" srcset="img/dainty-gold-necklace@2x.png 2x" width="270" height="284" alt="Gold chain">
-            </picture>
-            <h2 class="products-list__item-title">Gold chain</h2>
-            <p class="products-list__item-price">$ 215</p>
-          </a>
-        </li>
-        <li class="products-list__item">
-          <a href="#" class="products-list__item-link">
-            <picture>
-              <source srcset="img/galaxy-earrings@1x.webp 1x, img/galaxy-earrings@2x.webp 2x" type="image/webp">
-              <!--1x: 270*284; 2x: 540*568-->
-              <img src="img/galaxy-earrings@1x.png" srcset="img/galaxy-earrings@2x.png 2x" width="270" height="284" alt="Galaxy earrings">
-            </picture>
-            <h2 class="products-list__item-title">Galaxy earrings</h2>
-            <p class="products-list__item-price">$ 95</p>
-          </a>
-        </li>
-      </ul>
-      <ul class="pagination">
-        <li class="pagination__item">
-          <a href="#" class="pagination__item-link">1</a>
-        </li>
-        <li class="pagination__item">
-          <a href="#" class="pagination__item-link">2</a>
-        </li>
-        <li class="pagination__item">
-          <a href="#" class="pagination__item-link">3</a>
-        </li>
-      </ul>
+      <div class="container">
+        <ul class="products-list">
+          <li class="products-list__item">
+            <a href="#" class="products-list__item-link">
+              <picture>
+                <source srcset="img/purple-gemstone-necklace-desktop@1x.webp 1x, img/purple-gemstone-necklace-desktop@2x.webp 2x" type="image/webp">
+                <!--1x: 270*284; 2x: 540*568-->
+                <img src="img/purple-gemstone-necklace-desktop@1x.png" srcset="img/purple-gemstone-necklace-desktop@2x.png 2x" width="270" height="284" alt="Necklace with amethyst">
+              </picture>
+              <h2 class="products-list__item-title">Necklace with amethyst</h2>
+              <p class="products-list__item-price">$ 145</p>
+            </a>
+          </li>
+          <li class="products-list__item">
+            <a href="#" class="products-list__item-link">
+              <picture>
+                <source srcset="img/layered-choker-necklace@1x.webp 1x, img/layered-choker-necklace@2x.webp 2x" type="image/webp">
+                <!--1x: 270*284; 2x: 540*568-->
+                <img src="img/layered-choker-necklace@1x.png" srcset="img/layered-choker-necklace@2x.png 2x" width="270" height="284" alt="Layered сhoker">
+              </picture>
+              <h2 class="products-list__item-title products-list__item-title--tablet-adjust">Layered сhoker</h2>
+              <p class="products-list__item-price products-list__item-price--adjust">$ 115</p>
+            </a>
+          </li>
+          <li class="products-list__item products-list__item--tablet">
+            <a href="#" class="products-list__item-link">
+              <picture>
+                <source srcset="img/dainty-gold-necklace@1x.webp 1x, img/dainty-gold-necklace@2x.webp 2x" type="image/webp">
+                <!--1x: 270*284; 2x: 540*568-->
+                <img src="img/dainty-gold-necklace@1x.png" srcset="img/dainty-gold-necklace@2x.png 2x" width="270" height="284" alt="Gold chain">
+              </picture>
+              <h2 class="products-list__item-title">Gold chain</h2>
+              <p class="products-list__item-price">$ 215</p>
+            </a>
+          </li>
+          <li class="products-list__item products-list__item--tablet">
+            <a href="#" class="products-list__item-link">
+              <picture>
+                <source srcset="img/galaxy-earrings@1x.webp 1x, img/galaxy-earrings@2x.webp 2x" type="image/webp">
+                <!--1x: 270*284; 2x: 540*568-->
+                <img src="img/galaxy-earrings@1x.png" srcset="img/galaxy-earrings@2x.png 2x" width="270" height="284" alt="Galaxy earrings">
+              </picture>
+              <h2 class="products-list__item-title products-list__item-title--adjust">Galaxy earrings</h2>
+              <p class="products-list__item-price products-list__item-price--adjust-top">$ 95</p>
+            </a>
+          </li>
+        </ul>
+        <ul class="pagination">
+          <li class="pagination__item">
+            <a href="#" class="pagination__item-link pagination__item-link--active">1</a>
+          </li>
+          <li class="pagination__item pagination__item--mobile">
+            <a href="#" class="pagination__item-link">2</a>
+          </li>
+          <li class="pagination__item pagination__item--mobile">
+            <a href="#" class="pagination__item-link">3</a>
+          </li>
+          <li class="pagination__item">
+            <span>of</span>
+          </li>
+          <li class="pagination__item pagination__item--tablet pagination__item--mobile">
+            <a href="#" class="pagination__item-link">4</a>
+          </li>
+          <li class="pagination__item pagination__item--tablet pagination__item--mobile">
+            <a href="#" class="pagination__item-link">5</a>
+          </li>
+          <li class="pagination__item pagination__item--tablet">
+            <a href="#" class="pagination__item-link">6</a>
+          </li>
+        </ul>
+      </div>
     </section>
-
   </main>
   <footer class="footer">
     <div class="footer__wrapper container">
