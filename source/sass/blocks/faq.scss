@@ -1,0 +1,27 @@
+.faq {
+  padding-top: 119px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+
+  @include tablet {
+    padding-top: 69px;
+  }
+
+  @include mobile {
+    padding-top: 60px;
+  }
+}
+
+.faq__title {
+  @include reset;
+  display: flex;
+  align-items: center;
+  font-family: $cormorant-garamond;
+
+  @include font-size(34px, 700, 130%);
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: $link-color;
+}

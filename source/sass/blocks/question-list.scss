@@ -1,0 +1,151 @@
+.question-list {
+  @include reset_for_list;
+  margin-top: 50px;
+  width: 82.2%;
+
+  @include tablet {
+    margin-top: 49px;
+    width: 98.5%;
+  }
+
+  @include mobile {
+    margin-top: 28px;
+    width: 96.5%;
+  }
+}
+
+.question-list__item {
+  @include reset;
+  margin-top: -1px;
+  padding-top: 42px;
+  padding-right: 50px;
+  padding-bottom: 43px;
+  padding-left: 42px;
+  border: 1px solid $logo-color;
+
+  @include tablet {
+    padding-bottom: 44px;
+  }
+
+  @include mobile {
+    padding-top: 14px;
+    padding-right: 23px;
+    padding-bottom: 21px;
+    padding-left: 17px;
+
+    &--padding {
+      padding-top: 17px;
+      padding-bottom: 18px;
+    }
+  }
+}
+
+.question-list__item-title {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  @include reset;
+  font-family: $poppins;
+
+  @include font-size(18px, 500, 130%);
+  text-align: center;
+  color: $link-color;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    top: 10px;
+    right: -2px;
+    content: "";
+
+    @include size(15px, 8px);
+    background-image: url("../img/arrow-second.svg");
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
+
+    @include tablet {
+      top: 7px;
+
+      @include size(27px, 13px);
+      background-size: 26px 15px;
+    }
+  }
+
+  &--active {
+    &::before {
+      top: 8px;
+      right: 0;
+      transform: rotate(0);
+
+      @include tablet {
+        top: 6px;
+        right: -3px;
+      }
+
+      @include mobile {
+        top: 8px;
+      }
+    }
+  }
+
+  &--no-js {
+    &::before {
+      display: none;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: $logo-color;
+  }
+
+  @include tablet {
+    padding-top: 1px;
+    padding-left: 6px;
+  }
+
+  @include mobile {
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    @include font-size(16px, 500, 140%);
+    text-align: left;
+  }
+}
+
+.question-list__item-answer {
+  @include reset;
+  margin-top: 8px;
+  margin-left: 7px;
+  display: none;
+  width: 58%;
+  font-family: $poppins;
+
+  @include font-size(16px, 400, 130%);
+  color: $link-color;
+
+  &--no-js {
+    display: block;
+  }
+
+  &--active {
+    display: block;
+  }
+
+  @include tablet {
+    margin-top: 26px;
+    width: 92%;
+
+    span {
+      display: none;
+    }
+  }
+
+  @include mobile {
+    margin-top: 15px;
+    width: 83%;
+
+    @include font-size(14px, 400, 140%);
+  }
+}
