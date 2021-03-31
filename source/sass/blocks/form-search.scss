@@ -3,12 +3,18 @@
   margin-top: 8px;
   display: flex;
   align-self: center;
+  align-items: center;
+
+  &--catalog {
+    margin-top: 27px;
+  }
 
   input {
     padding: 5px;
     padding-left: 34px;
     line-height: 17px;
     border: none;
+    appearance: borderless-attachment;
 
     &::placeholder {
       font-family: $poppins;

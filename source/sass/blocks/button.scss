@@ -1,0 +1,64 @@
+.button {
+  @include btn-reset;
+  padding: 10px;
+  width: 100%;
+
+  @include size(100%, 68px);
+  min-height: 68px;
+  font-family: $poppins;
+
+  @include font-size(16px, 500, 130%);
+  text-align: center;
+  cursor: pointer;
+
+  @include tablet {
+    width: 47.2%;
+    margin-right: auto;
+    margin-left: 21px;
+  }
+
+  @include mobile {
+    margin: 0 auto;
+  }
+
+  &--submit {
+    margin-top: 35px;
+    color: $white;
+    background-color: $logo-color;
+
+    &:hover,
+    &:focus {
+      color: $basic-black;
+      opacity: 0.6;
+    }
+
+    @include tablet {
+      margin-top: 40px;
+    }
+
+    @include mobile {
+      margin-top: 30px;
+    }
+  }
+
+  &--reset {
+    margin-top: 25px;
+    color: $basic-black;
+    background-color: $white;
+    border: 1px solid $logo-color;
+
+    &:hover,
+    &:focus {
+      color: $white;
+      background-color: $logo-color;
+    }
+
+    @include mobile {
+      margin-top: 20px;
+    }
+  }
+
+  @include mobile {
+    width: 72%;
+  }
+}

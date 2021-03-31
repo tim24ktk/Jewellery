@@ -1,0 +1,54 @@
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include tablet {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    padding-top: 26px;
+    z-index: 1000;
+
+    @include size(100%, 100vh);
+    background-color: $white;
+
+
+    &--active {
+      display: flex;
+    }
+  }
+
+  @include mobile {
+    align-items: center;
+
+    &--active {
+      display: flex;
+    }
+  }
+}
+
+.filter__close {
+  display: none;
+
+  @include tablet {
+    position: absolute;
+    top: 11px;
+    right: 42.78%;
+    display: block;
+  }
+
+  @include mobile {
+    top: 60px;
+    right: 4.56%;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+}

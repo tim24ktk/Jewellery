@@ -1,0 +1,7 @@
+.catalog {
+  width: 74.6%;
+
+  @include tablet {
+    width: 100%;
+  }
+}

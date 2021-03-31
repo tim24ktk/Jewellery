@@ -78,9 +78,9 @@
         Login
       </a>
     </section>
-    <div class="header-top">
+    <div class="header-top header-top--catalog">
       <div class="header-top__wrapper container">
-        <form class="form-search" action="https://echo.htmlacademy.ru" method="get">
+        <form class="form-search form-search--catalog" action="https://echo.htmlacademy.ru" method="get">
           <label class="visually-hidden" for="search-id" aria-label="product search form">Search form</label>
           <input type="search" id="search-id" name="search" placeholder="Type here to search">
           <button type="submit" tabindex="0" aria-label="search button">
@@ -90,7 +90,7 @@
             </svg>
           </button>
         </form>
-        <button class="header-top__button header-top__button--no-js" type="button" aria-label="Open menu button">
+        <button class="header-top__button header-top__button--catalog header-top__button--no-js" type="button" aria-label="Open menu button">
           <span class="visually-hidden">Open menu</span>
           <svg role="img" width="25" height="18">
             <use xlink:href="#icon-main-menu"></use>
@@ -101,7 +101,7 @@
             <use xlink:href="#icon-logo"></use>
           </svg>
         </a>
-        <ul class="user-navigation">
+        <ul class="user-navigation user-navigation--catalog">
           <li class="user-navigation__item user-navigation__item--none">
             <a href="#" class="user-navigation__item-link">
               Login
@@ -141,10 +141,248 @@
   </header>
   <main>
     <h1 class="visually-hidden">Jewellery</h1>
-    <section class="promo">
+    <section class="promo promo--catalog">
       <h2 class="promo__title">All Jewellery</h2>
       <p class="promo__description">Discover picks of fashion's finest trends in our jewellery catalog</p>
     </section>
+    <div class="catalog-wrapper container">
+      <section class="filters">
+        <h2 class="visually-hidden">Filters</h2>
+        <a href="filter.html" class="filters__button">Filter</a>
+        <form class="filter" action="https://echo.htmlacademy.ru" method="get">
+          <ul class="filter-list">
+            <li class="filter-list__item filter-list__item--active">
+              <h3 class="filter-list__item-title filter-list__item-title--no-js" tabindex="0">Product</h3>
+              <div class="filter-list__item-block filter-list__item-block--no-js">
+                <label for="necklaces">
+                  <input type="checkbox" name="necklaces" id="necklaces" checked>
+                  <span>Necklaces</span>
+                </label>
+                <label for="chokers">
+                  <input type="checkbox" name="chokers" id="chokers" checked>
+                  <span>Chokers</span>
+                </label>
+                <label for="rings">
+                  <input type="checkbox" name="rings" id="rings">
+                  <span>Rings</span>
+                </label>
+                <label for="earrings">
+                  <input type="checkbox" name="earrings" id="earrings" checked>
+                  <span>Earrings</span>
+                </label>
+              </div>
+            </li>
+            <li class="filter-list__item">
+              <h3 class="filter-list__item-title filter-list__item-title--no-js" tabindex="0">Material</h3>
+              <div class="filter-list__item-block filter-list__item-block--no-js">
+                <label for="gold">
+                  <input type="checkbox" name="gold" id="gold" checked>
+                  <span>Gold</span>
+                </label>
+                <label for="silver">
+                  <input type="checkbox" name="silver" id="silver">
+                  <span>Silver</span>
+                </label>
+              </div>
+            </li>
+            <li class="filter-list__item">
+              <h3 class="filter-list__item-title filter-list__item-title--no-js filter-list__item-title--padding-bottom" tabindex="0">Collection</h3>
+              <div class="filter-list__item-block filter-list__item-block--no-js">
+                <label for="flamingo">
+                  <input type="checkbox" name="flamingo" id="flamingo" checked>
+                  <span>Pink flamingo</span>
+                </label>
+                <label for="silver">
+                  <input type="checkbox" name="dreams" id="dreams">
+                  <span>Dreams</span>
+                </label>
+              </div>
+            </li>
+            <li class="filter-list__item">
+              <h3 class="filter-list__item-title filter-list__item-title--no-js" tabindex="0">Price</h3>
+              <div class="filter-list__item-block filter-list__item-block--no-js range-filter">
+                <div class="range-filter__controls">
+                  <div class="range-filter__scale">
+                    <div class="range-filter__bar"></div>
+                  </div>
+                  <div class="range-filter__toggle range-filter__toggle--min" tabindex="0"></div>
+                  <div class="range-filter__toggle range-filter__toggle--max" tabindex="0"></div>
+                  <div class="range-filter__output">
+                    <label for="min-price">$ 55</label>
+                    <input class="visually-hidden" id="min-price" type="number" name="min-price" min="0" max="210" value="55" aria-label="Min value of the price">
+                    <label for="max-price">$ 155</label>
+                    <input class="visually-hidden" id="max-price" type="number" name="max-price" min="0" max="210" value="155" aria-label="Max value of the price">
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <button class="button button--submit" type="submit">Apply</button>
+          <button class="button button--reset" type="reset">Clear All</button>
+          <a href="catalog.html" class="filter__close" aria-label="Close filter">
+            <img src="img/close-second.svg" width="32" height="32" alt="Close button">
+            <span class="visually-hidden">Close</span>
+          </a>
+        </form>
+      </section>
+      <section class="catalog">
+        <ul class="products-list products-list--catalog">
+          <li class="products-list__item products-list__item--catalog">
+            <a href="card.html" class="products-list__item-link products-list__item-link--catalog">
+              <picture>
+                <source srcset="img/double-pearl-earrings@1x.webp 1x, img/double-pearl-earrings@2x.webp 2x" type="image/webp">
+                <!--1x: 270*284; 2x: 540*568-->
+                <img src="img/double-pearl-earrings@1x.png" srcset="img/double-pearl-earrings@2x.png 2x" width="270" height="284" alt="Double pearl earrings">
+              </picture>
+              <h2 class="products-list__item-title products-list__item-title--catalog products-list__item-title--margin-left">Double pearl earrings</h2>
+              <p class="products-list__item-price products-list__item-price--catalog">$ 115</p>
+            </a>
+          </li>
+          <li class="products-list__item products-list__item--catalog">
+            <a href="card.html" class="products-list__item-link products-list__item-link--catalog">
+              <picture>
+                <source srcset="img/black-choker-gold-bead@1x.webp 1x, img/black-choker-gold-bead@2x.webp 2x" type="image/webp">
+                <!--1x: 270*284; 2x: 540*568-->
+                <img src="img/black-choker-gold-bead@1x.png" srcset="img/black-choker-gold-bead@2x.png 2x" width="270" height="284" alt="Choker with gold bead">
+              </picture>
+              <h2 class="products-list__item-title products-list__item-title--catalog products-list__item-title--margin-left">Choker with gold bead</h2>
+              <p class="products-list__item-price products-list__item-price--catalog products-list__item-price--margin-left">$ 55</p>
+            </a>
+          </li>
+          <li class="products-list__item products-list__item--catalog">
+            <a href="card.html" class="products-list__item-link products-list__item-link--catalog">
+              <picture>
+                <source srcset="img/gold-layered-necklace@1x.webp 1x, img/gold-layered-necklace@2x.webp 2x" type="image/webp">
+                <!--1x: 270*284; 2x: 540*568-->
+                <img src="img/gold-layered-necklace@1x.png" srcset="img/gold-layered-necklace@2x.png 2x" width="270" height="284" alt="Gold layered necklace">
+              </picture>
+              <h2 class="products-list__item-title products-list__item-title--catalog products-list__item-title--margin-left">Gold layered necklace</h2>
+              <p class="products-list__item-price products-list__item-price--catalog">$ 155</p>
+            </a>
+          </li>
+          <li class="products-list__item products-list__item--catalog">
+            <a href="card.html" class="products-list__item-link products-list__item-link--catalog">
+              <picture>
+                <source srcset="img/blue-gemstone-pendant@1x.webp 1x, img/blue-gemstone-pendant@2x.webp 2x" type="image/webp">
+                <!--1x: 270*284; 2x: 540*568-->
+                <img src="img/blue-gemstone-pendant@1x.png" srcset="img/blue-gemstone-pendant@2x.png 2x" width="270" height="284" alt="Blue gemstone pendant">
+              </picture>
+              <h2 class="products-list__item-title products-list__item-title--catalog">Blue gemstone pendant</h2>
+              <p class="products-list__item-price products-list__item-price--catalog products-list__item-price--margin-left-second">$ 105</p>
+            </a>
+          </li>
+          <li class="products-list__item products-list__item--catalog">
+            <a href="card.html" class="products-list__item-link products-list__item-link--catalog">
+              <picture>
+                <source srcset="img/boho-earrings@1x.webp 1x, img/boho-earrings@2x.webp 2x" type="image/webp">
+                <!--1x: 270*284; 2x: 540*568-->
+                <img src="img/boho-earrings@1x.png" srcset="img/boho-earrings@2x.png 2x" width="270" height="284" alt="Boho earrings">
+              </picture>
+              <h2 class="products-list__item-title products-list__item-title--catalog">Boho earrings</h2>
+              <p class="products-list__item-price products-list__item-price--catalog">$ 75</p>
+            </a>
+          </li>
+          <li class="products-list__item products-list__item--catalog">
+            <a href="card.html" class="products-list__item-link products-list__item-link--catalog">
+              <picture>
+                <source srcset="img/bird-necklace@1x.webp 1x, img/bird-necklace@2x.webp 2x" type="image/webp">
+                <!--1x: 270*284; 2x: 540*568-->
+                <img src="img/bird-necklace@1x.png" srcset="img/bird-necklace@2x.png 2x" width="270" height="284" alt="Gold bird necklace">
+              </picture>
+              <h2 class="products-list__item-title products-list__item-title--catalog">Gold bird necklace</h2>
+              <p class="products-list__item-price products-list__item-price--catalog">$ 135</p>
+            </a>
+          </li>
+          <li class="products-list__item products-list__item--catalog">
+            <a href="card.html" class="products-list__item-link products-list__item-link--catalog">
+              <picture>
+                <source srcset="img/black-leather-choker-necklace@1x.webp 1x, img/black-leather-choker-necklace@2x.webp 2x" type="image/webp">
+                <!--1x: 270*284; 2x: 540*568-->
+                <img src="img/black-leather-choker-necklace@1x.png" srcset="img/black-leather-choker-necklace@2x.png 2x" width="270" height="284" alt="Black leather choker">
+              </picture>
+              <h2 class="products-list__item-title products-list__item-title--catalog">Black leather choker</h2>
+              <p class="products-list__item-price products-list__item-price--catalog">$ 85</p>
+            </a>
+          </li>
+          <li class="products-list__item products-list__item--catalog">
+            <a href="card.html" class="products-list__item-link products-list__item-link--catalog">
+              <picture>
+                <source srcset="img/purple-gemstone-necklace-desktop@1x.webp 1x, img/purple-gemstone-necklace-desktop@2x.webp 2x" type="image/webp">
+                <!--1x: 270*284; 2x: 540*568-->
+                <img src="img/purple-gemstone-necklace-desktop@1x.png" srcset="img/purple-gemstone-necklace-desktop@2x.png 2x" width="270" height="284" alt="Necklace with amethyst">
+              </picture>
+              <h2 class="products-list__item-title products-list__item-title--catalog">Necklace with amethyst</h2>
+              <p class="products-list__item-price products-list__item-price--catalog">$ 145</p>
+            </a>
+          </li>
+          <li class="products-list__item products-list__item--catalog">
+            <a href="card.html" class="products-list__item-link products-list__item-link--catalog">
+              <picture>
+                <source srcset="img/elephant-earrings@1x.webp 1x, img/elephant-earrings@2x.webp 2x" type="image/webp">
+                <!--1x: 270*284; 2x: 540*568-->
+                <img src="img/elephant-earrings@1x.png" srcset="img/elephant-earrings@2x.png 2x" width="270" height="284" alt="Elephant earrings">
+              </picture>
+              <h2 class="products-list__item-title products-list__item-title--catalog">Elephant earrings</h2>
+              <p class="products-list__item-price products-list__item-price--catalog">$ 95</p>
+            </a>
+          </li>
+          <li class="products-list__item products-list__item--catalog">
+            <a href="card.html" class="products-list__item-link products-list__item-link--catalog">
+              <picture>
+                <source srcset="img/threader-necklace-closeup@1x.webp 1x, img/threader-necklace-closeup@2x.webp 2x" type="image/webp">
+                <!--1x: 270*284; 2x: 540*568-->
+                <img src="img/threader-necklace-closeup@1x.png" srcset="img/threader-necklace-closeup@2x.png 2x" width="270" height="284" alt="Threader necklace">
+              </picture>
+              <h2 class="products-list__item-title products-list__item-title--catalog products-list__item-title--tablet-adjust">Threader necklace</h2>
+              <p class="products-list__item-price products-list__item-price--catalog">$ 115</p>
+            </a>
+          </li>
+          <li class="products-list__item products-list__item--catalog">
+            <a href="card.html" class="products-list__item-link products-list__item-link--catalog">
+              <picture>
+                <source srcset="img/origami-crane-necklace@1x.webp 1x, img/origami-crane-necklace@2x.webp 2x" type="image/webp">
+                <!--1x: 270*284; 2x: 540*568-->
+                <img src="img/origami-crane-necklace@1x.png" srcset="img/origami-crane-necklace@2x.png 2x" width="270" height="284" alt="Origami crane necklace">
+              </picture>
+              <h2 class="products-list__item-title products-list__item-title--catalog">Origami crane necklace</h2>
+              <p class="products-list__item-price products-list__item-price--catalog">$ 105</p>
+            </a>
+          </li>
+          <li class="products-list__item products-list__item--catalog">
+            <a href="card.html" class="products-list__item-link products-list__item-link--catalog">
+              <picture>
+                <source srcset="img/marble-earrings@1x.webp 1x, img/marble-earrings@2x.webp 2x" type="image/webp">
+                <!--1x: 270*284; 2x: 540*568-->
+                <img src="img/marble-earrings@1x.png" srcset="img/marble-earrings@2x.png 2x" width="270" height="284" alt="Marble earrings">
+              </picture>
+              <h2 class="products-list__item-title products-list__item-title--catalog">Marble earrings</h2>
+              <p class="products-list__item-price products-list__item-price--catalog">$ 95</p>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <div class="pagination-wrapper">
+      <button class="pagination-wrapper__button pagination-wrapper__button--left" type="button">Previous</button>
+      <ul class="pagination pagination--catalog">
+        <li class="pagination__item">
+          <a href="#" class="pagination__item-link pagination__item-link--active">1</a>
+        </li>
+        <li class="pagination__item">
+          <a href="#" class="pagination__item-link">2</a>
+        </li>
+        <li class="pagination__item">
+          <a href="#" class="pagination__item-link">3</a>
+        </li>
+        <li class="pagination__item">
+          <a href="#" class="pagination__item-link">4</a>
+        </li>
+        <li class="pagination__item">
+          <a href="#" class="pagination__item-link">5</a>
+        </li>
+      </ul>
+      <button class="pagination-wrapper__button pagination-wrapper__button--right" type="button">Next</button>
+    </div>
   </main>
   <footer class="footer">
     <div class="footer__wrapper container">
@@ -210,7 +448,7 @@
           </a>
         </li>
       </ul>
-      </div>
+    </div>
   </footer>
   <script src="js/main.js"></script>
 </body>

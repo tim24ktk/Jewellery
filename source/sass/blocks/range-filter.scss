@@ -1,0 +1,120 @@
+.range-filter {
+  width: 81%;
+  height: 50px;
+  margin: 0 auto;
+  margin-top: 5px;
+
+  @include tablet {
+    margin-top: -1px;
+    margin-bottom: 21px;
+    margin-left: 32px;
+    width: 72%;
+  }
+
+  @include mobile {
+    margin-top: 9px;
+    margin-bottom: 11px;
+    margin-left: 11px;
+    width: 91%;
+  }
+}
+
+.range-filter__controls {
+  position: relative;
+}
+
+.range-filter__scale {
+  border: 1px solid $article-background;
+}
+
+.range-filter__bar {
+  position: absolute;
+  top: 0;
+  left: 25%;
+  width: 55%;
+  border: 1px solid $logo-color;
+
+  @include tablet {
+    left: 19%;
+  }
+}
+
+.range-filter__toggle {
+  @include reset;
+  position: absolute;
+  top: -6px;
+
+  @include size(15px, 15px);
+  background-color: $logo-color;
+  border-radius: 50%;
+  cursor: pointer;
+
+  @include tablet {
+    top: -8px;
+  }
+
+  &--min {
+    left: 22.5%;
+
+    @include tablet {
+      left: 14.5%;
+    }
+
+    @include mobile {
+      left: 16%;
+    }
+  }
+
+  &--max {
+    left: 75%;
+
+    @include tablet {
+      left: 72.3%;
+    }
+
+    @include mobile {
+      left: 72%;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  @include tablet {
+    @include size(18px, 18px);
+  }
+}
+
+.range-filter__output {
+  margin: 0 auto;
+  margin-top: 12px;
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  font-family: $poppins;
+
+  @include font-size(14px, 500, 130%);
+  text-align: center;
+
+  label {
+    margin-left: 12px;
+  }
+
+  @include tablet {
+    width: 84%;
+    font-size: 16px;
+
+    label {
+      margin-top: 2px;
+      margin-right: 32px;
+    }
+  }
+
+  @include mobile {
+    label {
+      margin-right: 21px;
+    }
+  }
+}

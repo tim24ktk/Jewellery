@@ -19,12 +19,20 @@
   margin-top: -1px;
   padding-top: 42px;
   padding-right: 50px;
-  padding-bottom: 43px;
+  padding-bottom: 42px;
   padding-left: 42px;
   border: 1px solid $logo-color;
 
+  &--padding {
+    padding-bottom: 44.5px;
+  }
+
   @include tablet {
     padding-bottom: 44px;
+
+    &--padding {
+      padding-bottom: 43.5px;
+    }
   }
 
   @include mobile {
@@ -70,6 +78,11 @@
       @include size(27px, 13px);
       background-size: 26px 15px;
     }
+
+    @include mobile {
+      @include size(24px, 12px);
+      background-size: 26px 15px;
+    }
   }
 
   &--active {
@@ -84,7 +97,8 @@
       }
 
       @include mobile {
-        top: 8px;
+        top: 9px;
+        right: 0;
       }
     }
   }

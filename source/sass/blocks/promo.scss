@@ -7,6 +7,7 @@
   background-size: 100% 34.9vw;
   box-shadow: 0 4px 4px $white-drop-shadow;
 
+
   @include retina {
     background-image: url("../img/promo@2x.png");
   }
@@ -29,6 +30,56 @@
 
     @include retina {
       background-image: url("../img/promo-mobile@2x.png");
+    }
+  }
+
+  &--catalog {
+    flex-direction: column;
+    align-items: center;
+    min-height: 19.15vw;
+    background-image: url("../img/promo-catalog@1x.png");
+    box-shadow: none;
+
+    .promo__title {
+      margin: 0 auto;
+      margin-top: 6.6vw;
+      font-size: 2.49vw;
+      letter-spacing: normal;
+
+      @include tablet {
+        margin-top: 11.8vw;
+        padding-right: 0;
+        font-size: 4.43vw;
+      }
+
+      @include mobile {
+        margin-top: 23.6vw;
+        font-size: 10.6vw;
+      }
+    }
+
+    @include retina {
+      background-image: url("../img/promo-catalog@2x.png");
+    }
+
+    @include tablet {
+      min-height: 34vw;
+      background-image: url("../img/promo-tablet-catalog@1x.png");
+      background-size: 100% 60.9vw;
+
+      @include retina {
+        background-image: url("../img/promo-table-catalogt@2x.png");
+      }
+    }
+
+    @include mobile {
+      min-height: 81.6vw;
+      background-image: url("../img/promo-mobile-catalog@1x.png");
+      background-size: 100% 81.9vw;
+
+      @include retina {
+        background-image: url("../img/promo-mobile-catalog@2x.png");
+      }
     }
   }
 }
@@ -75,5 +126,23 @@
       font-size: 9.6vw;
       line-height: 70%;
     }
+  }
+}
+
+.promo__description {
+  @include reset;
+  display: flex;
+  align-items: center;
+  font-family: $cormorant-garamond;
+  font-style: italic;
+
+  @include font-size(22px, 500, 130%);
+  text-align: center;
+  color: $white;
+
+  @include mobile {
+    width: 90%;
+    font-size: 6.93vw;
+    line-height: 117%;
   }
 }

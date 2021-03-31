@@ -7,6 +7,14 @@
   justify-content: space-between;
   width: 154px;
 
+  &--catalog {
+    margin-top: 27px;
+
+    @include tablet {
+      margin-top: 5px;
+    }
+  }
+
   @include tablet {
     width: auto;
   }

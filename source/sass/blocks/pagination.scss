@@ -6,10 +6,26 @@
 
   @include tablet {
     margin-top: -10px;
+
+    &--catalog {
+      margin-top: -2px;
+    }
   }
 
   @include mobile {
     margin-top: -19px;
+  }
+
+  &--catalog {
+    padding-right: 35px;
+
+    @include mobile {
+      margin: 0 auto;
+      padding: 0;
+      width: 54%;
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }
 

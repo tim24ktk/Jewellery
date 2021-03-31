@@ -52,7 +52,7 @@
   if (answers) {
     answers.forEach((answer) => {
       if (answer.classList.contains(`question-list__item-answer--no-js`)) {
-        answer.classList.remove(`question-list__item-answer--no-js`)
+        answer.classList.remove(`question-list__item-answer--no-js`);
       }
     });
   };
@@ -73,5 +73,171 @@
         activePanel = (activePanel === this) ? 0 : this;
       });
     });
+  };
+
+  /* аккордеон для фильтра */
+  const filterButtons = document.querySelectorAll(`.filter-list__item-title`);
+  const filterBlocks = document.querySelectorAll(`.filter-list__item-block`);
+
+  if (filterBlocks) {
+    filterBlocks.forEach((filterBlock) => {
+      if (filterBlock.classList.contains(`filter-list__item-block--no-js`)) {
+        filterBlock.classList.remove(`filter-list__item-block--no-js`);
+      };
+    });
+  };
+
+  if (filterButtons) {
+    filterButtons.forEach(function(item) {
+      if (item.classList.contains(`filter-list__item-title--no-js`)) {
+        item.classList.remove(`filter-list__item-title--no-js`)
+      }
+      item.addEventListener('click', function() {
+        this.classList.toggle(`filter-list__item-title--active`);
+        this.nextElementSibling.classList.toggle('filter-list__item-block--active');
+      });
+    });
+  };
+
+  /* слайдер */
+  const PictureCount = {
+    DESKTOP: 4,
+    TABLET: 2
+  };
+
+  const MaxWidth = {
+    TABLET: 1023,
+    MOBILE: 767
+  };
+
+  const tablet = window.matchMedia(`(max-width: ${MaxWidth.TABLET}px)`);
+  const mobile = window.matchMedia(`(max-width: ${MaxWidth.MOBILE}px)`);
+
+  const list = document.querySelector(`.products-list--js`);
+  const items = document.querySelectorAll(`.products-list__item--js`);
+  const buttonLeft = document.querySelector(`.new__left-button`);
+  const buttonRight = document.querySelector(`.new__right-button`);
+
+  let wrapperWidth; /* вычисляемая под конкретное разрешение ширина контейнера */
+  let itemWidth; /* вычисляемая под конкретное разрешение ширина 1 слайда */
+  let itemMarginRight; /* вычисляемый margin */
+
+  let positionLeftItem = 0;
+  let transform = 0;
+
+  let step; /* шаг */
+  let itemsArray = [];
+  let startX = 0; /* для мобильного тача - начало перемещения */
+
+  if (items) {
+    items.forEach((item, index) => {
+      itemsArray.push({item: item, position: index, transform: 0});
+    });
   }
+
+  const position = {
+    getMin: 0,
+    getMax: itemsArray.length - 1
+  };
+
+  let count; /* временная переменная для определения количества изображений на адаптиве */
+
+
+  const changeSizeHandler = (evt) => {
+
+    if (evt.matches) {
+      count = PictureCount.TABLET;
+    } else {
+      count = PictureCount.DESKTOP;
+    }
+
+    if (list && items) {
+      wrapperWidth = parseFloat(getComputedStyle(list).width);
+      itemWidth = parseFloat(getComputedStyle(items[0]).width);
+      itemMarginRight = parseInt(getComputedStyle(items[0]).marginRight);
+
+      step = (itemWidth + itemMarginRight) / wrapperWidth * 100;
+
+      positionLeftItem = 0;
+      transform = 0;
+      list.style.transform = `translateX(` + transform + `%)`;
+    }
+  };
+
+  const setMobileHandler = (evt) => {
+    if (evt.matches) {
+      setMobileTouch();
+    }
+  };
+
+  const buttonRightClickHandler = () => {
+    if (positionLeftItem + count >= position.getMax) {
+      return;
+    }
+
+    positionLeftItem = positionLeftItem + count;
+
+    transform -= step * count;
+    list.style.transform = `translateX(` + transform + `%)`;
+  };
+
+  const buttonLeftClickHandler = () => {
+    if (positionLeftItem <= position.getMin) {
+      return;
+    }
+
+    positionLeftItem = positionLeftItem - count;
+    transform += step * count;
+
+    list.style.transform = `translateX(` + transform + `%)`;
+  };
+
+  const setMobileTouch = () => {
+    if (list) {
+      list.addEventListener(`touchstart`, (evt) => {
+        startX = evt.changedTouches[0].clientX;
+      });
+
+      list.addEventListener(`touchend`, (evt) => {
+        let endX = evt.changedTouches[0].clientX;
+        let deltaX = endX - startX;
+
+        if (deltaX > 50) {
+          buttonRightClickHandler();
+        } else if (deltaX < -50) {
+          buttonLeftClickHandler();
+        }
+      });
+    }
+  };
+
+  if (buttonLeft && buttonRight) {
+    buttonRight.addEventListener(`click`, buttonRightClickHandler);
+    buttonLeft.addEventListener(`click`, buttonLeftClickHandler);
+  }
+
+  tablet.addListener(changeSizeHandler);
+  changeSizeHandler(tablet);
+
+  mobile.addListener(setMobileHandler);
+  setMobileHandler(mobile);
 })();
+
+/* open close filter */
+const filterOpen = document.querySelector(`.filters__button`);
+const filterClose = document.querySelector(`.filter__close`);
+const filter = document.querySelector(`.filter`);
+
+if (filterOpen) {
+  filterOpen.addEventListener(`click`, (evt) => {
+    evt.preventDefault();
+    filter.classList.add(`filter--active`);
+  });
+};
+
+if (filterClose) {
+  filterOpen.addEventListener(`click`, (evt) => {
+    evt.preventDefault();
+    filterClose.classList.remove(`filter--active`);
+  });
+}

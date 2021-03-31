@@ -1,0 +1,41 @@
+.filters {
+  width: 21.2%;
+  margin-left: 5px;
+
+  @include tablet {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.filters__button {
+  @include reset;
+  display: none;
+  font-family: $poppins;
+
+  @include font-size(16px, 500, 130%);
+  color: $white;
+  background: $logo-color;
+  border: 1px solid $logo-color;
+
+  &:hover,
+  &:focus {
+    color: $basic-black;
+    background-color: $white;
+  }
+
+  @include tablet {
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include size(98.5%, 68px);
+    text-align: center;
+  }
+
+  @include mobile {
+    width: 96.5%;
+  }
+}

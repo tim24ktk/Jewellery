@@ -1,0 +1,15 @@
+.catalog-wrapper {
+  padding-top: 79px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include tablet {
+    padding-top: 50px;
+    flex-direction: column;
+  }
+
+  @include mobile {
+    padding-top: 40px;
+  }
+}

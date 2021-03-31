@@ -1,0 +1,41 @@
+.pagination-wrapper {
+  margin-right: 93px;
+  margin-left: auto;
+  padding-top: 30px;
+  padding-bottom: 69px;
+  display: flex;
+  justify-content: space-between;
+  width: 64.4%;
+
+  @include tablet {
+    margin-right: 41px;
+    padding-top: 34px;
+    width: 89.4%;
+  }
+
+  @include mobile {
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 11px;
+    padding-bottom: 59px;
+  }
+}
+
+.pagination-wrapper__button {
+  @include btn-reset;
+  padding: 5px;
+  font-family: $poppins;
+
+  @include font-size(16px, 500, 130%);
+  color: $link-color;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $logo-color;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}

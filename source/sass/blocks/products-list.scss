@@ -4,13 +4,22 @@
   margin-left: 4px;
   margin-right: -28px;
   display: flex;
-  flex-wrap: wrap;
+
+  &--catalog {
+    margin-top: 0;
+    margin-left: 3px;
+    flex-wrap: wrap;
+  }
 
   @include tablet {
     margin-top: 48px;
-    margin-right: 0;
-    width: 98.9%;
+    margin-right: 4.2%;
+    width: 99.3%;
     justify-content: space-between;
+
+    &--catalog {
+      width: 99.1%;
+    }
   }
 
   @include mobile {
@@ -24,7 +33,17 @@
   @include reset;
   margin-right: 2.34%;
   margin-bottom: 28px;
-  width: 22.6%;
+  min-width: 22.6%;
+
+  &--catalog {
+    width: 30.33%;
+    margin-right: 2.81%;
+    margin-bottom: 16px;
+
+    @include tablet {
+      margin-bottom: 15px;
+    }
+  }
 
   &:hover,
   &:focus {
@@ -34,16 +53,26 @@
   }
 
   @include tablet {
-    margin-right: 0;
-    width: 47.7%;
+    margin-right: 4.2%;
+    min-width: 47.7%;
 
-    &--tablet {
-      display: none;
+    &--catalog {
+      margin-right: 0;
+      width: 30.7%;
+      min-width: 30.7%;
     }
   }
 
   @include mobile {
-    width: 44.8%;
+    margin-right: 9.6%;
+    width: 45.1%;
+    min-width: 45.1%;
+
+    &--catalog {
+      margin-right: 0;
+      margin-bottom: 4.8px;
+      width: 45.3%;
+    }
   }
 }
 
@@ -61,11 +90,25 @@
     object-fit: fill;
 
     @include tablet {
-      @include size(42vw,44.4vw);
+      @include size(43vw,44.4vw);
     }
 
     @include mobile {
       height: 42.6vw;
+    }
+  }
+
+  &--catalog {
+    img {
+      @include size(19.7vw, 19.9vw);
+
+      @include tablet {
+        @include size(26.82vw, 27.3vw);
+      }
+
+      @include mobile {
+        @include size(41vw, 42.5vw);
+      }
     }
   }
 }
@@ -86,6 +129,10 @@
     margin-left: 7px;
   }
 
+  &--margin-left {
+    margin-left: 7px;
+  }
+
   @include tablet {
     margin-top: 9px;
     margin-left: 17px;
@@ -94,6 +141,11 @@
       margin-top: 15px;
       margin-left: -2px;
     }
+
+    &--catalog {
+      margin-top: 15px;
+      margin-left: 0;
+    }
   }
 
   @include mobile {
@@ -101,6 +153,11 @@
 
     &--tablet-adjust {
       margin-top: 10px;
+    }
+
+    &--catalog {
+      margin-top: 11px;
+      margin-left: 0;
     }
   }
 }
@@ -124,12 +181,32 @@
     margin-top: 0;
   }
 
+  &--margin-left {
+    margin-left: 13px;
+
+    @include tablet {
+      margin-left: 0;
+    }
+  }
+
+  &--margin-left-second {
+    margin-left: 5px;
+
+    @include tablet {
+      margin-left: 0;
+    }
+  }
+
   @include tablet {
     margin-top: 12px;
 
     &--adjust {
       margin-top: 6px;
       padding-left: 0;
+    }
+
+    &--catalog {
+      margin-top: 6px;
     }
   }
 
