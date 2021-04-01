@@ -1,0 +1,18 @@
+.image-column {
+  margin-top: 10px;
+  margin-left: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 50.87%;
+
+  @include tablet {
+    flex-direction: column-reverse;
+    width: 46%;
+  }
+
+  @include mobile {
+    margin: 0 auto;
+    width: 100%;
+  }
+}

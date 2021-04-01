@@ -15,6 +15,11 @@
     background-color: $border-color;
   }
 
+
+  &--card {
+    padding-bottom: 24px;
+  }
+
   @include tablet {
     padding-bottom: 25px;
 
@@ -88,6 +93,16 @@
 
     @include mobile {
       margin-top: 17px;
+    }
+  }
+
+  &--card {
+    @include tablet {
+      margin-top: 28px;
+    }
+
+    @include mobile {
+      margin-top: 18px;
     }
   }
 }

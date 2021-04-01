@@ -78,9 +78,9 @@
         Login
       </a>
     </section>
-    <div class="header-top">
+    <div class="header-top header-top--card">
       <div class="header-top__wrapper container">
-        <form class="form-search" action="https://echo.htmlacademy.ru" method="get">
+        <form class="form-search form-search--card" action="https://echo.htmlacademy.ru" method="get">
           <label class="visually-hidden" for="search-id" aria-label="product search form">Search form</label>
           <input type="search" id="search-id" name="search" placeholder="Type here to search">
           <button type="submit" tabindex="0" aria-label="search button">
@@ -90,7 +90,7 @@
             </svg>
           </button>
         </form>
-        <button class="header-top__button header-top__button--no-js" type="button" aria-label="Open menu button">
+        <button class="header-top__button header-top__button--card header-top__button--no-js" type="button" aria-label="Open menu button">
           <span class="visually-hidden">Open menu</span>
           <svg role="img" width="25" height="18">
             <use xlink:href="#icon-main-menu"></use>
@@ -101,7 +101,7 @@
             <use xlink:href="#icon-logo"></use>
           </svg>
         </a>
-        <ul class="user-navigation">
+        <ul class="user-navigation user-navigation--card">
           <li class="user-navigation__item user-navigation__item--none">
             <a href="#" class="user-navigation__item-link">
               Login
@@ -119,7 +119,7 @@
         </ul>
       </div>
     </div>
-    <nav class="main-nav container">
+    <nav class="main-nav main-nav--card container">
       <ul class="site-navigation">
         <li class="site-navigation__item">
           <a href="#" class="site-navigation__item-link">What’s new</a>
@@ -141,14 +141,105 @@
   </header>
   <main>
     <h1 class="visually-hidden">Jewellery</h1>
-    <section class="new">
+    <section class="card container">
+      <div class="image-column">
+        <ul class="preview-list">
+          <li class="preview-list__item" tabindex="0">
+            <picture>
+              <source srcset="img/gold-necklace-for-women@1x.webp 1x, img/gold-necklace-for-women@2x.webp 2x" type="image/webp">
+              <!--1x: 100*125; 2x: 200*250-->
+              <img src="img/gold-necklace-for-women@1x.png" srcset="img/gold-necklace-for-women@2x.png 2x" width="100" height="125" alt="Gold necklace for women">
+            </picture>
+          </li>
+          <li class="preview-list__item preview-list__item--height" tabindex="0">
+            <picture>
+              <source srcset="img/pretty-gold-necklace@1x.webp 1x, img/pretty-gold-necklace@2x.webp 2x" type="image/webp">
+              <!--1x: 100*125; 2x: 200*250-->
+              <img src="img/pretty-gold-necklace@1x.png" srcset="img/pretty-gold-necklace@2x.png 2x" width="100" height="125" alt="Pretty gold necklace">
+            </picture>
+          <li class="preview-list__item" tabindex="0">
+            <picture>
+              <source srcset="img/womens-necklace-set@1x.webp 1x, img/womens-necklace-set@2x.webp 2x" type="image/webp">
+              <!--1x: 100*125; 2x: 200*250-->
+              <img src="img/womens-necklace-set@1x.png" srcset="img/womens-necklace-set@2x.png 2x" width="100" height="125" alt="Womens necklace set">
+            </picture>
+        </li>
+        </ul>
+        <div class="big-image">
+          <picture>
+            <source srcset="img/necklace-detail@1x.webp 1x, img/necklace-detail@2x.webp 2x" type="image/webp">
+            <!--1x: 470*435; 2x: 940*870-->
+            <img src="img/necklace-detail@1x.png" srcset="img/necklace-detail@2x.png 2x" width="470" height="435" alt="Necklace detail">
+          </picture>
+          <ul class="pagination pagination--card">
+            <li class="pagination__item pagination__item--card">1</li>
+            <li class="pagination__item pagination__item--card">
+              <span>of</span>
+            </li>
+            <li class="pagination__item pagination__item--card">4</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card-description-column">
+        <h2 class="card-description-column__title">Gold Necklace </h2>
+        <p class="card-description-column__text">$ 115</p>
+        <div class="card-descrition-column__wrapper">
+          <ul class="card-descriptin-column__buttons-list">
+            <li class="card-description-column__buttons-item">
+              <button  class="card-description-column__button card-description-column__button--active" type="button">Description</button>
+            </li>
+            <li class="card-description-column__buttons-item">
+              <button class="card-description-column__button" type="button">Additional info</button>
+            </li>
+          </ul>
+          <div class="card-descrition-column__blocks">
+            <dl class="card-descrition-column__description-block card-descrition-column__description-block--active">
+              <div class="card-descrition-column__description-wrapper">
+                <dt>Metal type</dt>
+                <dd>Gold 585</dd>
+              </div>
+              <div class="card-descrition-column__description-wrapper">
+                <dt>Stone</dt>
+                <dd>Turquoise</dd>
+              </div>
+              <div class="card-descrition-column__description-wrapper">
+                <dt>Size</dt>
+                <dd>18” / 20”</dd>
+              </div>
+            </dl>
+            <dl class="card-descrition-column__description-block">
+              <div class="card-descrition-column__description-wrapper">
+                <dt>Metal type</dt>
+                <dd>Gold 586</dd>
+              </div>
+              <div class="card-descrition-column__description-wrapper">
+                <dt>Stone</dt>
+                <dd>Turquoise</dd>
+              </div>
+              <div class="card-descrition-column__description-wrapper">
+                <dt>Size</dt>
+                <dd>19” / 20”</dd>
+              </div>
+            </dl>
+          </div>
+          <button class="card-descrition-column__add-button" type="button">Add to cart</button>
+          <ul class="card-description-column__guarantee">
+            <li class="card-description-column__guarantee-item">14 Day Returns</li>
+            <li class="card-description-column__guarantee-item card-description-column__guarantee-item--border">2-Year Warranty</li>
+            <li class="card-description-column__guarantee-item">Free Shipping</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+    <section class="new new--card">
       <div class="new__container">
         <div class="new__header">
-          <div class="new__center">
+          <div class="new__center new__center--catalog">
             <h2 class="new__title">You May Also Like</h2>
-            <a href="catalog.html" class="new__link">Shop Now</a>
+            <a href="catalog.html" class="new__link new__link--card">Shop Now</a>
           </div>
-          <button class="new__left-button" type="button" aria-label="Slide left">
+          <button class="new__left-button new__left-button--catalog" type="button" aria-label="Slide left">
             <span class="visually-hidden">Slide left</span>
             <svg role="img" width="30" height="11">
               <use xlink:href="#icon-arrow"></use>
@@ -162,20 +253,20 @@
           </button>
         </div>
       </div>
-      <div class="container">
-        <ul class="products-list">
-          <li class="products-list__item">
+      <div class="new__products container">
+        <ul class="products-list products-list--js">
+          <li class="products-list__item products-list__item--js">
             <a href="#" class="products-list__item-link">
               <picture>
                 <source srcset="img/purple-gemstone-necklace-desktop@1x.webp 1x, img/purple-gemstone-necklace-desktop@2x.webp 2x" type="image/webp">
                 <!--1x: 270*284; 2x: 540*568-->
                 <img src="img/purple-gemstone-necklace-desktop@1x.png" srcset="img/purple-gemstone-necklace-desktop@2x.png 2x" width="270" height="284" alt="Necklace with amethyst">
               </picture>
-              <h2 class="products-list__item-title">Necklace with amethyst</h2>
-              <p class="products-list__item-price">$ 145</p>
+              <h2 class="products-list__item-title products-list__item-title--card">Necklace with amethyst</h2>
+              <p class="products-list__item-price products-list__item-price--card">$ 145</p>
             </a>
           </li>
-          <li class="products-list__item">
+          <li class="products-list__item products-list__item--js">
             <a href="#" class="products-list__item-link">
               <picture>
                 <source srcset="img/layered-choker-necklace@1x.webp 1x, img/layered-choker-necklace@2x.webp 2x" type="image/webp">
@@ -183,10 +274,10 @@
                 <img src="img/layered-choker-necklace@1x.png" srcset="img/layered-choker-necklace@2x.png 2x" width="270" height="284" alt="Layered сhoker">
               </picture>
               <h2 class="products-list__item-title products-list__item-title--tablet-adjust">Layered сhoker</h2>
-              <p class="products-list__item-price products-list__item-price--adjust">$ 115</p>
+              <p class="products-list__item-price products-list__item-price--card">$ 115</p>
             </a>
           </li>
-          <li class="products-list__item products-list__item--tablet">
+          <li class="products-list__item products-list__item--js products-list__item--tablet">
             <a href="#" class="products-list__item-link">
               <picture>
                 <source srcset="img/dainty-gold-necklace@1x.webp 1x, img/dainty-gold-necklace@2x.webp 2x" type="image/webp">
@@ -197,15 +288,15 @@
               <p class="products-list__item-price">$ 215</p>
             </a>
           </li>
-          <li class="products-list__item products-list__item--tablet">
+          <li class="products-list__item products-list__item--js products-list__item--tablet">
             <a href="#" class="products-list__item-link">
               <picture>
                 <source srcset="img/galaxy-earrings@1x.webp 1x, img/galaxy-earrings@2x.webp 2x" type="image/webp">
                 <!--1x: 270*284; 2x: 540*568-->
                 <img src="img/galaxy-earrings@1x.png" srcset="img/galaxy-earrings@2x.png 2x" width="270" height="284" alt="Galaxy earrings">
               </picture>
-              <h2 class="products-list__item-title products-list__item-title--adjust">Galaxy earrings</h2>
-              <p class="products-list__item-price products-list__item-price--adjust-top">$ 95</p>
+              <h2 class="products-list__item-title">Galaxy earrings</h2>
+              <p class="products-list__item-price products-list__item-price--card-top">$ 95</p>
             </a>
           </li>
         </ul>

@@ -1,0 +1,47 @@
+.preview-list {
+  @include reset_for_list;
+
+  @include tablet {
+    margin-top: 1.8vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.preview-list__item {
+  @include reset;
+  margin-bottom: 2.3vw;
+  cursor: pointer;
+
+  @include size(7.3vw, 9.1vw);
+
+  img {
+    @include size(7.3vw, 9.2vw);
+  }
+
+  &--height {
+    margin-bottom: 2.2vw;
+
+    img {
+      height: 9.1vw;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  @include tablet {
+    @include size(12.6vw, 17.1vw);
+
+    img {
+      @include size(12.6vw, 16.8vw);
+    }
+  }
+}

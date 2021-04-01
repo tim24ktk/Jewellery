@@ -1,0 +1,270 @@
+.card-description-column {
+  padding-left: 7.33vw;
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    padding-left: 0.79vw;
+  }
+
+  @include mobile {
+    width: 100%;
+    padding-top: 41px;
+    padding-left: 1.5vw;
+  }
+}
+
+.card-description-column__title {
+  @include reset;
+  display: flex;
+  align-items: center;
+  font-family: $cormorant-garamond;
+
+  @include font-size(34px, 700, 130%);
+  text-align: center;
+  color: $link-color;
+}
+
+.card-description-column__text {
+  @include reset;
+  margin-top: 0.8vw;
+  display: flex;
+  align-items: center;
+  font-family: $poppins;
+
+  @include font-size(26px, 400, 130%);
+  text-align: center;
+  color: $link-color;
+
+  @include tablet {
+    margin-top: 1.5vw;
+  }
+
+  @include mobile {
+    margin-top: 3.4vw;
+  }
+}
+
+.card-descrition-column__wrapper {
+  margin-top: 2.43vw;
+
+  @include tablet {
+    margin-top: 4.4vw;
+  }
+
+  @include mobile {
+    margin-top: 7vw;
+  }
+}
+
+.card-descriptin-column__buttons-list {
+  @include reset_for_list;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.card-description-column__button {
+  &--active {
+    color: $placeholder-color;
+  }
+}
+
+.card-description-column__buttons-item {
+  @include reset;
+  margin-right: 30px;
+  color: $link-color;
+
+  button {
+    @include btn-reset;
+    padding: 5px;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    font-family: $poppins;
+
+    @include font-size(16px, 500, 130%);
+    text-align: center;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: $logo-color;
+    }
+  }
+
+  @include mobile {
+    margin-right: 34px;
+  }
+}
+
+.card-descrition-column__description-block {
+  @include reset;
+  position: absolute;
+  width: 100%;
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
+.card-descrition-column__blocks {
+  margin-top: 1.94vw;
+  position: relative;
+  min-height: 10vw;
+
+  @include tablet {
+    margin-top: 3.3vw;
+    min-height: 19vw;
+  }
+
+  @include mobile {
+    margin-top: 8.3vw;
+    min-height: 44.9vw;
+  }
+}
+
+.card-descrition-column__description-wrapper {
+  position: relative;
+  margin-bottom: 1.6vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 79.2%;
+  font-family: $poppins;
+
+  @include font-size(14px, 400, 130%);
+  text-align: center;
+  color: $link-color;
+
+  dt {
+    @include reset;
+    font-weight: 500;
+  }
+
+  dd {
+    @include reset;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: -0.8vw;
+
+    @include size(100%, 1px);
+    background-color: $border-color;
+  }
+
+  @include tablet {
+    margin-bottom: 2.77vw;
+    width: 98.3%;
+
+    &::before {
+      bottom: -1.49vw;
+    }
+  }
+
+  @include mobile {
+    margin-bottom: 6.77vw;
+
+    &::before {
+      bottom: -3.3vw;
+    }
+  }
+}
+
+
+.card-descrition-column__add-button {
+  @include btn-reset;
+  margin-top: 1.67vw;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include size(79.3%, 68px);
+  font-family: $poppins;
+
+  @include font-size(16px, 500, 130%);
+  cursor: pointer;
+  text-align: center;
+  color: $white;
+  background-color: $logo-color;
+  border: 1px solid $logo-color;
+
+  &:hover,
+  &:focus {
+    color: $link-color;
+    background-color: $white;
+  }
+
+  @include tablet {
+    width: 98.4%;
+  }
+}
+
+.card-description-column__guarantee {
+  @include reset_for_list;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 79.2%;
+
+  @include tablet {
+    width: 98.2%;
+  }
+
+  @include mobile {
+    margin-top: 2vw;
+    width: 97.2%;
+  }
+}
+
+.card-description-column__guarantee-item {
+  position: relative;
+
+  @include reset;
+  margin-top: 1.2vw;
+  display: flex;
+  align-items: center;
+  font-family: $poppins;
+
+  @include font-size(1.02vw, 500, 130%);
+  text-align: center;
+  color: $placeholder-color;
+
+  @include tablet {
+    margin-top: 1.98vw;
+    font-size: 1.54vw;
+  }
+
+  @include mobile {
+    margin-top: 1.98vw;
+    font-size: 3.7vw;
+    width: 23%;
+
+    &--border {
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+
+        @include size(1px, 20px);
+        background-color: $border-color;
+      }
+
+      &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        content: "";
+
+        @include size(1px, 20px);
+        background-color: $border-color;
+      }
+    }
+  }
+}

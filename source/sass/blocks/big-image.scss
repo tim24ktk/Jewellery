@@ -1,0 +1,28 @@
+.big-image {
+  position: relative;
+
+  @include size(34.4vw, 31.9vw);
+
+  img {
+    @include size(34.4vw, 31.9vw);
+    object-fit: fill;
+  }
+
+  @include tablet {
+    @include size(41.5vw, 37.3vw);
+
+    img {
+      @include size(41.5vw, 37.3vw);
+    }
+  }
+
+  @include mobile {
+    margin: 0 auto;
+
+    @include size(90.5vw, 81.3vw);
+
+    img {
+      @include size(90.5vw, 81.3vw);
+    }
+  }
+}

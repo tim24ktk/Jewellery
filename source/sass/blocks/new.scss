@@ -10,6 +10,16 @@
   @include mobile {
     padding-top: 60px;
   }
+
+  &--card {
+    padding-top: 89px;
+    padding-bottom: 117px;
+
+    @include tablet {
+      padding-top: 50px;
+      padding-bottom: 68px;
+    }
+  }
 }
 
 .new__container {
@@ -35,6 +45,10 @@
   flex-direction: column;
   align-items: center;
   order: 2;
+
+  &--catalog {
+    margin-left: 0;
+  }
 
   @include tablet {
     margin-left: 0;
@@ -70,6 +84,11 @@
   color: $link-color;
   border-bottom: 1px solid $logo-color;
 
+  &--card {
+    margin-top: 20px;
+    padding-bottom: 4px;
+  }
+
   &:hover,
   &:focus {
     color: $logo-color;
@@ -96,6 +115,11 @@
     @include tablet {
       @include size(37px, 15px);
     }
+  }
+
+  &--catalog {
+    margin-top: 11px;
+    margin-left: 16px;
   }
 
   &:hover,

@@ -146,6 +146,11 @@
       margin-top: 15px;
       margin-left: 0;
     }
+
+    &--card {
+      margin-top: 16px;
+      margin-left: 0;
+    }
   }
 
   @include mobile {
@@ -197,6 +202,10 @@
     }
   }
 
+  &--card-top {
+    margin-top: 5px;
+  }
+
   @include tablet {
     margin-top: 12px;
 
@@ -206,6 +215,10 @@
     }
 
     &--catalog {
+      margin-top: 6px;
+    }
+
+    &--card {
       margin-top: 6px;
     }
   }

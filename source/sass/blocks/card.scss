@@ -1,0 +1,15 @@
+.card {
+  padding-top: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include tablet {
+    padding-top: 19px;
+  }
+
+  @include mobile {
+    padding-top: 0;
+    flex-direction: column;
+  }
+}
