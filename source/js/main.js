@@ -241,3 +241,58 @@ if (filterClose) {
     filterClose.classList.remove(`filter--active`);
   });
 }
+
+/* модальное окно добавления товара */
+const openCartModal = document.querySelector(`.card-description-column__add-button`);
+const cartModal = document.querySelector(`.cart-modal`);
+const modalWrapper = document.querySelector(`.cart-modal__wrapper`);
+const closeCart = document.querySelector(`.cart-modal__close`);
+const body = document.querySelector(`body`);
+const ESCAPE = `Escape`;
+
+if (openCartModal) {
+  openCartModal.addEventListener(`click`, (evt) => {
+    evt.preventDefault();
+    cartModal.classList.add(`cart-modal--active`);
+    body.classList.add(`body-position`);
+  });
+};
+
+const checkEscape = (evt, escapeActionCb) => {
+  if (evt.key === ESCAPE) {
+    evt.preventDefault();
+    escapeActionCb();
+  }
+};
+
+const closePopup = () => {
+  cartModal.classList.remove(`cart-modal--active`);
+  body.classList.remove(`body-position`);
+};
+
+const onEscapeKeydown = (evt) => {
+  checkEscape(evt, closePopup);
+  body.classList.remove(`body-position`);
+};
+
+if (closeCart) {
+  closeCart.addEventListener(`click`, (evt) => {
+    evt.preventDefault();
+    cartModal.classList.remove(`cart-modal--active`);
+    body.classList.remove(`body-position`);
+  });
+};
+
+if (modalWrapper) {
+  modalWrapper.addEventListener(`click`, (evt) => {
+    evt.stopPropagation();
+  });
+};
+
+if (cartModal) {
+  cartModal.addEventListener(`click`, () => {
+    cartModal.classList.remove(`cart-modal--active`);
+    body.classList.remove(`body-position`);
+  });
+  document.addEventListener(`keydown`, onEscapeKeydown);
+};

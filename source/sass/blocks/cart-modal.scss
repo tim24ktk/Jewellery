@@ -1,0 +1,302 @@
+.cart-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+
+  @include size(100%, 100%);
+  background-color: $modal-background;
+  z-index: 100;
+
+  &--active {
+    display: block;
+  }
+
+  &--no-js {
+    display: block;
+  }
+}
+
+.cart-modal__wrapper {
+  margin: auto;
+  padding-top: 47px;
+  padding-bottom: 55px;
+  position: fixed;
+  top: 50%;
+  bottom: auto;
+  left: 0;
+  right: 0;
+  width: 36.6%;
+  min-width: 500px;
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  transform: translate(0, -50%);
+  box-shadow: 0 4px 32px $madal-shadow;
+
+  @include tablet {
+    width: 65.3%;
+    min-width: 502px;
+  }
+
+  @include mobile {
+    top: 46.9%;
+    padding-top: 37px;
+    padding-bottom: 25px;
+    width: 90%;
+    min-width: 290px;
+  }
+}
+
+.cart-modal__title {
+  @include reset;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $cormorant-garamond;
+
+  @include font-size(26px, 700, 130%);
+  text-align: center;
+  color: $link-color;
+
+  @include mobile {
+    width: 70%;
+    font-size: 7.51vw;
+  }
+}
+
+.cart-modal__item-added {
+  margin: 0 auto;
+  margin-top: 37px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 88.3%;
+
+  @include tablet {
+    width: 89.5%;
+  }
+
+  @include mobile {
+    margin-top: 20px;
+    margin-bottom: 0;
+    width: 92.5%;
+  }
+}
+
+.cart-modal__picture {
+  margin-top: 9px;
+  margin-left: 6px;
+
+  @include size(6.12vw, 5.77vw);
+
+  @include tablet {
+    margin-left: 4px;
+
+    @include size(11.4vw, 10.3vw);
+  }
+
+  @include mobile {
+    @include size(21.8vw, 19.6vw);
+  }
+}
+
+.cart-modal__product-title {
+  @include reset;
+  margin-top: 3px;
+  margin-left: 21px;
+  display: flex;
+  align-items: center;
+  font-family: $cormorant-garamond;
+
+  @include font-size(18px, 700, 130%);
+  text-align: center;
+  color: $link-color;
+
+  @include tablet {
+    margin-top: 5px;
+  }
+
+  @include mobile {
+    margin-top: 6px;
+    margin-left: 16px;
+    font-size: 4.99vw;
+  }
+}
+
+.cart-modal__product-price {
+  @include reset;
+  margin-top: 8px;
+  margin-left: 21px;
+  display: flex;
+  align-items: center;
+  font-family: $poppins;
+
+  @include font-size(18px, 400, 130%);
+  text-align: center;
+  color: $link-color;
+
+  @include tablet {
+    margin-top: 7px;
+  }
+
+  @include mobile {
+    margin-top: 5px;
+    margin-left: 16px;
+    font-size: 4.99vw;
+  }
+}
+
+.cart-modal__add {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  button {
+    padding: 4px;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+  }
+
+  @include tablet {
+    margin-top: 5px;
+  }
+}
+
+.cart-modal__add-button {
+  @include btn-reset;
+
+  @include mobile {
+    @include size(7vw, 7.8vw);
+  }
+}
+
+.cart-modal__remove-button {
+  @include btn-reset;
+  margin-top: -1px;
+
+  @include mobile {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    @include size(7vw, 7.8vw);
+  }
+}
+
+.cart-modal__count {
+  @include reset;
+  margin-top: 7px;
+  display: flex;
+  align-items: center;
+  font-family: $poppins;
+
+  @include font-size(18px, 400, 130%);
+  text-align: center;
+  color: $link-color;
+
+  @include mobile {
+    font-size: 4.9vw;
+  }
+}
+
+.cart-modal__information {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 86%;
+
+  @include tablet {
+    width: 88%;
+  }
+
+  @include mobile {
+    margin-top: 40px;
+    width: 90%;
+    flex-direction: column;
+  }
+}
+
+.cart-modal__item-count {
+  @include reset;
+  display: flex;
+  align-items: center;
+  font-family: $poppins;
+
+  @include font-size(14px, 400, 130%);
+  text-align: center;
+  color: $link-color;
+
+  @include mobile {
+    font-size: 3.77vw;
+  }
+}
+
+.cart-modal__total-price {
+  @include reset;
+  display: flex;
+  align-items: center;
+  font-family: $poppins;
+
+  @include font-size(14px, 500, 130%);
+  text-align: center;
+  color: $link-color;
+
+
+  @include mobile {
+    margin-top: 12px;
+    font-size: 3.77vw;
+  }
+}
+
+.cart-modal__close {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 14px;
+  right: 15px;
+  padding: 5px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  @include tablet {
+    top: 15px;
+    right: 16px;
+  }
+
+  @include mobile {
+    top: 9px;
+    right: 10px;
+  }
+}
+
+.cart-modal__buttons-wrapper {
+  margin: 0 auto;
+  margin-top: 36px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 86%;
+
+  @include tablet {
+    width: 88%;
+  }
+
+  @include mobile {
+    margin-top: 32px;
+    width: 89.9%;
+  }
+}

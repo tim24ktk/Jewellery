@@ -1,0 +1,46 @@
+.cart-button {
+  @include reset;
+  padding: 5px;
+
+  @include size(14.62vw, 68px);
+  min-width: 200px;
+  font-family: $poppins;
+
+  @include font-size(16px, 500, 130%);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  color: $link-color;
+  border: 1px solid $logo-color;
+
+  &--checkout {
+    color: $white;
+    background-color: $logo-color;
+
+    &:hover,
+    &:focus {
+      color: $link-color;
+      background-color: $white;
+    }
+  }
+
+  &--continue {
+    &:hover,
+    &:focus {
+      color: $white;
+      background-color: $logo-color;
+    }
+  }
+
+  @include tablet {
+    width: 26.8vw;
+    min-width: 206px;
+  }
+
+  @include mobile {
+    margin-bottom: 20px;
+    width: 100%;
+    min-width: 260px;
+  }
+}

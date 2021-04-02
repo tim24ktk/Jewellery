@@ -150,6 +150,10 @@
     &--card {
       margin-top: 16px;
       margin-left: 0;
+
+      @include mobile {
+        margin-top: 10px;
+      }
     }
   }
 

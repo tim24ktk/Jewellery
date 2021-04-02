@@ -183,8 +183,8 @@
       <div class="card-description-column">
         <h2 class="card-description-column__title">Gold Necklace </h2>
         <p class="card-description-column__text">$ 115</p>
-        <div class="card-descrition-column__wrapper">
-          <ul class="card-descriptin-column__buttons-list">
+        <div class="card-description-column__wrapper">
+          <ul class="card-description-column__buttons-list">
             <li class="card-description-column__buttons-item">
               <button  class="card-description-column__button card-description-column__button--active" type="button">Description</button>
             </li>
@@ -192,37 +192,37 @@
               <button class="card-description-column__button" type="button">Additional info</button>
             </li>
           </ul>
-          <div class="card-descrition-column__blocks">
-            <dl class="card-descrition-column__description-block card-descrition-column__description-block--active">
-              <div class="card-descrition-column__description-wrapper">
+          <div class="card-description-column__blocks">
+            <dl class="card-description-column__description-block card-description-column__description-block--active">
+              <div class="card-description-column__description-wrapper">
                 <dt>Metal type</dt>
                 <dd>Gold 585</dd>
               </div>
-              <div class="card-descrition-column__description-wrapper">
+              <div class="card-description-column__description-wrapper">
                 <dt>Stone</dt>
                 <dd>Turquoise</dd>
               </div>
-              <div class="card-descrition-column__description-wrapper">
+              <div class="card-description-column__description-wrapper">
                 <dt>Size</dt>
                 <dd>18” / 20”</dd>
               </div>
             </dl>
-            <dl class="card-descrition-column__description-block">
-              <div class="card-descrition-column__description-wrapper">
+            <dl class="card-description-column__description-block">
+              <div class="card-description-column__description-wrapper">
                 <dt>Metal type</dt>
                 <dd>Gold 586</dd>
               </div>
-              <div class="card-descrition-column__description-wrapper">
+              <div class="card-description-column__description-wrapper">
                 <dt>Stone</dt>
                 <dd>Turquoise</dd>
               </div>
-              <div class="card-descrition-column__description-wrapper">
+              <div class="card-description-column__description-wrapper">
                 <dt>Size</dt>
                 <dd>19” / 20”</dd>
               </div>
             </dl>
           </div>
-          <button class="card-descrition-column__add-button" type="button">Add to cart</button>
+          <a href="cart-modal.html" class="card-description-column__add-button">Add to cart</a>
           <ul class="card-description-column__guarantee">
             <li class="card-description-column__guarantee-item">14 Day Returns</li>
             <li class="card-description-column__guarantee-item card-description-column__guarantee-item--border">2-Year Warranty</li>
@@ -392,6 +392,45 @@
       </ul>
       </div>
   </footer>
+  <section class="cart-modal">
+    <div class="cart-modal__wrapper">
+      <h2 class="cart-modal__title">The item was added to your cart</h2>
+      <div class="cart-modal__item-added">
+        <picture>
+          <source srcset="img/necklace-detail@1x.webp 1x, img/necklace-detail@2x.webp 2x" type="image/webp">
+          <!--1x: 470*435; 2x: 940*870-->
+          <img class="cart-modal__picture" src="img/necklace-detail@1x.png" srcset="img/necklace-detail@2x.png 2x" width="470" height="435" alt="Necklace detail">
+        </picture>
+        <div class="cart-modal__product">
+          <h3 class="cart-modal__product-title">Gold Necklace </h3>
+          <p class="cart-modal__product-price">$ 115</p>
+        </div>
+        <div class="cart-modal__add">
+          <button class="cart-modal__add-button" tabindex="0" type="button" aria-label="Add item">
+            <img src="img/plus.svg" width="14" height="14" alt="Add item">
+            <span class="visually-hidden">Add</span>
+          </button>
+          <p class="cart-modal__count">1</p>
+          <button  class="cart-modal__remove-button" tabindex="0" type="button" aria-label="Remove item">
+            <img src="img/minus.svg" width="14" height="2" alt="Remove item">
+            <span class="visually-hidden">Remove</span>
+          </button>
+        </div>
+      </div>
+      <div class="cart-modal__information">
+        <p class="cart-modal__item-count">You have<span>&nbsp;1&nbsp;</span>item in the cart</p>
+        <p class="cart-modal__total-price">Cart subtotal: $<span>&nbsp;115</span></p>
+      </div>
+      <div class="cart-modal__buttons-wrapper">
+        <a href="card.html" class="cart-button cart-button--continue">Continue shopping</a>
+        <a href="cart.html" class="cart-button cart-button--checkout">Checkout</a>
+      </div>
+      <a href="card.html" class="cart-modal__close" aria-label="Close modal">
+        <img src="img/close.svg" width="14" height="14" alt="Close modal">
+        <span class="visually-hidden">Close</span>
+      </a>
+    </div>
+  </section>
   <script src="js/main.js"></script>
 </body>
 

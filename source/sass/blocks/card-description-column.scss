@@ -1,5 +1,5 @@
 .card-description-column {
-  padding-left: 7.33vw;
+  padding-left: 6.67vw;
   width: 48%;
   display: flex;
   flex-direction: column;
@@ -46,7 +46,7 @@
   }
 }
 
-.card-descrition-column__wrapper {
+.card-description-column__wrapper {
   margin-top: 2.43vw;
 
   @include tablet {
@@ -58,7 +58,7 @@
   }
 }
 
-.card-descriptin-column__buttons-list {
+.card-description-column__buttons-list {
   @include reset_for_list;
   display: flex;
   flex-wrap: wrap;
@@ -99,7 +99,7 @@
   }
 }
 
-.card-descrition-column__description-block {
+.card-description-column__description-block {
   @include reset;
   position: absolute;
   width: 100%;
@@ -110,7 +110,7 @@
   }
 }
 
-.card-descrition-column__blocks {
+.card-description-column__blocks {
   margin-top: 1.94vw;
   position: relative;
   min-height: 10vw;
@@ -126,13 +126,13 @@
   }
 }
 
-.card-descrition-column__description-wrapper {
+.card-description-column__description-wrapper {
   position: relative;
   margin-bottom: 1.6vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 79.2%;
+  width: 78%;
   font-family: $poppins;
 
   @include font-size(14px, 400, 130%);
@@ -176,15 +176,15 @@
 }
 
 
-.card-descrition-column__add-button {
-  @include btn-reset;
+.card-description-column__add-button {
+  @include reset;
   margin-top: 1.67vw;
   padding: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  @include size(79.3%, 68px);
+  @include size(77.8%, 68px);
   font-family: $poppins;
 
   @include font-size(16px, 500, 130%);
@@ -210,7 +210,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 79.2%;
+  width: 78.2%;
 
   @include tablet {
     width: 98.2%;
@@ -235,9 +235,44 @@
   text-align: center;
   color: $placeholder-color;
 
+  &--border {
+    &::before {
+      position: absolute;
+      top: 0;
+      left: -1.1vw;
+      content: "";
+
+      @include size(1px, 20px);
+      background-color: $border-color;
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: -1vw;
+      content: "";
+
+      @include size(1px, 20px);
+      background-color: $border-color;
+    }
+  }
+
+
   @include tablet {
     margin-top: 1.98vw;
     font-size: 1.54vw;
+
+    &--border {
+      &::before {
+        left: -1.7vw;
+        height: 2.4vw;
+      }
+
+      &::after {
+        right: -1.7vw;
+        height: 2.4vw;
+      }
+    }
   }
 
   @include mobile {
@@ -247,23 +282,13 @@
 
     &--border {
       &::before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        content: "";
-
-        @include size(1px, 20px);
-        background-color: $border-color;
+        left: -7.8vw;
+        height: 6vw;
       }
 
       &::after {
-        position: absolute;
-        top: 0;
-        right: 0;
-        content: "";
-
-        @include size(1px, 20px);
-        background-color: $border-color;
+        right: -7.5vw;
+        height: 6vw;
       }
     }
   }
