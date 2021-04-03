@@ -44,6 +44,14 @@
 
 .pagination__item {
   @include reset;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  font-family: $poppins;
+
+  @include font-size(16px, 500, 130%);
+  text-align: center;
+  color: $placeholder-color;
 
   &--tablet {
     display: none;
@@ -81,29 +89,6 @@
       padding-top: 0;
     }
   }
-}
-
-.pagination__item-link {
-  @include reset;
-  padding: 6px;
-  display: flex;
-  align-items: center;
-  font-family: $poppins;
-
-  @include font-size(16px, 500, 130%);
-  text-align: center;
-  color: $placeholder-color;
-
-  &--active {
-    color: $link-color;
-    pointer-events: none;
-    cursor: default;
-  }
-
-  &:hover,
-  &:focus {
-    color: $logo-color;
-  }
 
   @include tablet {
     padding: 6px 6.5px;
@@ -116,6 +101,10 @@
     font-family: $poppins;
 
     @include font-size(16px, 500, 130%);
+    color: $placeholder-color;
+  }
+
+  &--active {
     color: $link-color;
   }
 }

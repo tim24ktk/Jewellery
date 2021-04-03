@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="decoration, please your loved ones, Jewellery, best jewelry, jewelry for every taste">
+  <title>Jewellery</title>
+  <link rel="preload" href="fonts/poppins-v15-latin-regular.woff2" as="font">
+  <link rel="preload" href="fonts/cormorant-garamond-v9-latin-regular.woff2" as="font">
+  <link href="css/styles.min.css" rel="stylesheet">
+</head>
+
+<body class="body">
+  <main>
+    <h1 class="visually-hidden">Jewellery</h1>
+    <form class="filter filter--active" action="https://echo.htmlacademy.ru" method="get">
+      <div class="filter__wrapper">
+        <ul class="filter-list">
+        <li class="filter-list__item filter-list__item--active">
+          <h3 class="filter-list__item-title filter-list__item-title--no-js" tabindex="0">Product</h3>
+          <div class="filter-list__item-block filter-list__item-block--no-js">
+            <label for="necklaces">
+              <input type="checkbox" name="necklaces" id="necklaces" checked="">
+              <span>Necklaces</span>
+            </label>
+            <label for="chokers">
+              <input type="checkbox" name="chokers" id="chokers" checked="">
+              <span>Chokers</span>
+            </label>
+            <label for="rings">
+              <input type="checkbox" name="rings" id="rings">
+              <span>Rings</span>
+            </label>
+            <label for="earrings">
+              <input type="checkbox" name="earrings" id="earrings" checked="">
+              <span>Earrings</span>
+            </label>
+          </div>
+        </li>
+        <li class="filter-list__item">
+          <h3 class="filter-list__item-title filter-list__item-title--no-js" tabindex="0">Material</h3>
+          <div class="filter-list__item-block filter-list__item-block--no-js">
+            <label for="gold">
+              <input type="checkbox" name="gold" id="gold" checked="">
+              <span>Gold</span>
+            </label>
+            <label for="silver">
+              <input type="checkbox" name="silver" id="silver">
+              <span>Silver</span>
+            </label>
+          </div>
+        </li>
+        <li class="filter-list__item">
+          <h3 class="filter-list__item-title filter-list__item-title--no-js filter-list__item-title--padding-bottom" tabindex="0">Collection</h3>
+          <div class="filter-list__item-block filter-list__item-block--no-js">
+            <label for="flamingo">
+              <input type="checkbox" name="flamingo" id="flamingo" checked="">
+              <span>Pink flamingo</span>
+            </label>
+            <label for="dreams">
+              <input type="checkbox" name="dreams" id="dreams">
+              <span>Dreams</span>
+            </label>
+          </div>
+        </li>
+        <li class="filter-list__item">
+          <h3 class="filter-list__item-title filter-list__item-title--no-js" tabindex="0">Price</h3>
+          <div class="filter-list__item-block filter-list__item-block--no-js range-filter">
+            <div class="range-filter__controls">
+              <div class="range-filter__scale">
+                <div class="range-filter__bar"></div>
+              </div>
+              <div class="range-filter__toggle range-filter__toggle--min" tabindex="0"></div>
+              <div class="range-filter__toggle range-filter__toggle--max" tabindex="0"></div>
+              <div class="range-filter__output">
+                <label for="min-price">$ 55</label>
+                <input class="visually-hidden" id="min-price" type="number" name="min-price" min="0" max="210" value="55" aria-label="Min value of the price">
+                <label for="max-price">$ 155</label>
+                <input class="visually-hidden" id="max-price" type="number" name="max-price" min="0" max="210" value="155" aria-label="Max value of the price">
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <button class="button button--submit" type="submit">Apply</button>
+      <button class="button button--reset" type="reset">Clear All</button>
+      <a href="catalog.html" class="filter__close" aria-label="Close filter">
+        <img src="img/close-second.svg" width="32" height="32" alt="Close button">
+        <span class="visually-hidden">Close</span>
+      </a>
+    </div>
+  </form>
+</main>
+</body>
+
+</html>

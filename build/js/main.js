@@ -236,9 +236,9 @@ if (filterOpen) {
 };
 
 if (filterClose) {
-  filterOpen.addEventListener(`click`, (evt) => {
+  filterClose.addEventListener(`click`, (evt) => {
     evt.preventDefault();
-    filterClose.classList.remove(`filter--active`);
+    filter.classList.remove(`filter--active`);
   });
 }
 
@@ -295,4 +295,80 @@ if (cartModal) {
     body.classList.remove(`body-position`);
   });
   document.addEventListener(`keydown`, onEscapeKeydown);
+};
+
+/* open-close login modal */
+const openButtons = document.querySelectorAll(`.open-login`);
+const loginModal = document.querySelector(`.login`);
+const loginWrapper = document.querySelector(`.login__wrapper`);
+const closeLogin = document.querySelector(`.login__close`);
+const emailInput = document.querySelector(`#log-in`);
+const passwordInput = document.querySelector(`input[type='password']`);
+const loginForm = document.querySelector(`.login__form`);
+
+let isStorageSupport = true;
+let storageMail = ``;
+
+try {
+  storageMail = localStorage.getItem(`email`);
+} catch (err) {
+  isStorageSupport = false;
+}
+
+if (openButtons) {
+  openButtons.forEach((button) => {
+    button.addEventListener(`click`, (evt) => {
+      evt.preventDefault();
+      loginModal.classList.add(`login--active`);
+      body.classList.add(`body-position`);
+      emailInput.focus();
+      if (storageMail) {
+        emailInput.value = storageMail;
+        if (passwordInput) {
+          passwordInput.focus();
+        }
+      }
+    });
+  });
+};
+
+if (loginForm) {
+  loginForm.addEventListener(`submit`, (evt) => {
+    if (!emailInput || !passwordInput) {
+      evt.preventDefault();
+    } else {
+      localStorage.setItem(`email`, emailInput.value);
+    }
+  });
+};
+
+const closeLoginPopup = () => {
+  loginModal.classList.remove(`login--active`);
+  body.classList.remove(`body-position`);
+}
+
+const onEscapeLoginKeydown = (evt) => {
+  checkEscape(evt, closeLoginPopup);
+  body.classList.remove(`body-position`);
+};
+
+if (closeLogin) {
+  closeLogin.addEventListener(`click`, () => {
+    loginModal.classList.remove(`login--active`);
+    body.classList.remove(`body-position`);
+});
+}
+
+if (loginWrapper) {
+  loginWrapper.addEventListener(`click`, (evt) => {
+    evt.stopPropagation();
+  });
+};
+
+if (loginModal) {
+  loginModal.addEventListener(`click`, function() {
+    loginModal.classList.remove(`login--active`);
+    body.classList.remove(`body-position`);
+  });
+  document.addEventListener(`keydown`, onEscapeLoginKeydown);
 };

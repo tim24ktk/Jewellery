@@ -12,13 +12,9 @@
   cursor: pointer;
 
   @include tablet {
-    width: 47.2%;
     margin-right: auto;
     margin-left: 21px;
-  }
-
-  @include mobile {
-    margin: 0 auto;
+    width: 85.6%;
   }
 
   &--submit {
@@ -59,6 +55,8 @@
   }
 
   @include mobile {
-    width: 72%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 84.5%;
   }
 }

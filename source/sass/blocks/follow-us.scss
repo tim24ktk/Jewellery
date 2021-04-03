@@ -63,6 +63,10 @@
 
     @include size(100%, 1px);
     background-color: $logo-color;
+
+    @include tablet {
+      bottom: -3px;
+    }
   }
 
   @include tablet {

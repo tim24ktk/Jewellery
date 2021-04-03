@@ -3,14 +3,8 @@
   margin-top: 2px;
   width: 100%;
 
-  @include tablet {
-    width: 55%;
-    box-shadow: 0 5px 32px $box-shadow;
-  }
-
   @include mobile {
-    width: 85%;
-    margin-top: 50px;
+    margin-top: 0;
   }
 }
 

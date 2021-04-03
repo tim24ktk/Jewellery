@@ -32,6 +32,24 @@
   }
 }
 
+.filter__wrapper {
+  padding-bottom: 40px;
+  width: 100%;
+
+  @include tablet {
+    width: 55%;
+    box-shadow: 0 5px 32px $box-shadow;
+  }
+
+  @include mobile {
+    margin-top: 50px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+  }
+}
+
 .filter__close {
   display: none;
 

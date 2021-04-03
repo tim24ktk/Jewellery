@@ -1,15 +1,36 @@
 .catalog-wrapper {
+  position: relative;
   padding-top: 79px;
+
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+
+    @include size(100%, 1px);
+    background-color: $border-color;
+  }
+
+  @include tablet {
+    padding-top: 50px;
+
+    &::before {
+      bottom: -2px;
+    }
+  }
+
+  @include mobile {
+    padding-top: 40px;
+  }
+}
+
+.catalog-wrapper__content {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 
   @include tablet {
-    padding-top: 50px;
     flex-direction: column;
-  }
-
-  @include mobile {
-    padding-top: 40px;
   }
 }

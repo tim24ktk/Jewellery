@@ -11,6 +11,10 @@
     margin-right: 41px;
     padding-top: 34px;
     width: 89.4%;
+
+    &::before {
+      top: 1px;
+    }
   }
 
   @include mobile {

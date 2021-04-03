@@ -1,0 +1,254 @@
+.login {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+
+  @include size(100%, 100%);
+  background-color: $white;
+  z-index: 100;
+
+  &--active {
+    display: block;
+  }
+
+  &--no-js {
+    display: block;
+  }
+}
+
+.login__wrapper {
+  margin: auto;
+  padding-bottom: 55px;
+  position: fixed;
+  top: 48.9%;
+  bottom: auto;
+  left: 0;
+  right: 0;
+  width: 30.6%;
+  min-width: 430px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $article-background;
+  transform: translate(0, -50%);
+  box-shadow: 0 4px 32px $login-shadow;
+
+  @include tablet {
+    top: 46.4%;
+    width: 57.6%;
+    min-width: 442px;
+  }
+
+  @include mobile {
+    padding-bottom: 39px;
+    top: 35.4%;
+    width: 84.5%;
+    min-width: 270px;
+  }
+}
+
+.login__title {
+  @include reset;
+  margin-top: 44px;
+  display: flex;
+  align-items: center;
+  font-family: $cormorant-garamond;
+
+  @include font-size(34px, 700, 130%);
+  text-align: center;
+  color: $link-color;
+
+  @include mobile {
+    margin-top: 33px;
+    font-size: 24px;
+  }
+}
+
+.login__picture {
+  @include size(43vw, 10.11vw);
+  min-height: 138px;
+  object-fit: fill;
+
+  @include tablet {
+    width: 58vw;
+  }
+
+  @include mobile {
+    @include size(85vw, 26.11vw);
+    min-height: 84px;
+  }
+}
+
+.login__form {
+  margin-top: 27px;
+  display: flex;
+  flex-direction: column;
+  width: 79.5%;
+
+  input {
+    margin-bottom: 28px;
+    padding: 5px;
+    padding-left: 0;
+    padding-bottom: 9px;
+    font-family: $poppins;
+
+    @include font-size(14px, 500, 21px);
+    color: $placeholder-color;
+    border: none;
+    border-radius: 0;
+    appearance: none;
+    background-color: transparent;
+    border-bottom: 1px solid $link-color;
+
+    @include mobile {
+      margin-bottom: 23px;
+    }
+  }
+
+  &::placeholder {
+    font-family: $poppins;
+
+    @include font-size(14px, 500, 21px);
+    color: $placeholder-color;
+  }
+
+  a {
+    @include reset;
+    margin-top: -24px;
+    margin-right: 2px;
+    font-family: $poppins;
+
+    @include font-size(12px, 500, 18px);
+    color: $placeholder-color;
+    text-align: right;
+
+    &:hover,
+    &:focus {
+      color: $link-color;
+    }
+
+    @include mobile {
+      margin-top: -18px;
+      margin-right: 0;
+    }
+  }
+
+  button {
+    @include btn-reset;
+    margin: 0 auto;
+    margin-top: 46px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include size(24.9vw, 68px);
+    min-width: 340px;
+    font-family: $poppins;
+
+    @include font-size(16px, 500, 130%);
+    color: $white;
+    text-align: center;
+    background-color: $logo-color;
+    border: 1px solid $logo-color;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: $white;
+      color: $logo-color;
+    }
+
+    @include tablet {
+      width: 44.2vw;
+    }
+
+    @include mobile {
+      margin-top: 35px;
+      width: 75vw;
+      min-width: 240px;
+    }
+  }
+
+  @include tablet {
+    width: 77.5%;
+  }
+
+  @include mobile {
+    margin-top: 18px;
+    width: 88.5%;
+  }
+}
+
+.login__sign-up {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 54%;
+  font-family: $poppins;
+
+  @include font-size(14px, 500, 21px);
+  color: $placeholder-color;
+
+  p {
+    @include reset;
+  }
+
+  a {
+    @include reset;
+    margin-right: 4px;
+    color: $link-color;
+
+    &:hover,
+    &:focus {
+      color: $placeholder-color;
+    }
+
+    @include tablet {
+      margin-right: 0;
+    }
+  }
+
+  @include tablet {
+    width: 51%;
+  }
+
+  @include mobile {
+    margin-top: 15px;
+    width: 83%;
+  }
+}
+
+.login__close {
+  position: absolute;
+  top: 13px;
+  right: 15px;
+  padding: 5px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  @include tablet {
+    top: 15px;
+
+    img {
+      @include size(20px, 20px);
+    }
+  }
+
+  @include mobile {
+    top: 7px;
+    right: 10px;
+
+    img {
+      @include size(14px, 14px);
+    }
+  }
+}

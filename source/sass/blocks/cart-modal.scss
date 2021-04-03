@@ -34,7 +34,7 @@
   flex-direction: column;
   background-color: $white;
   transform: translate(0, -50%);
-  box-shadow: 0 4px 32px $madal-shadow;
+  box-shadow: 0 4px 32px $modal-shadow;
 
   @include tablet {
     width: 65.3%;
