@@ -4,28 +4,26 @@
   margin-left: 4px;
   margin-right: -28px;
   display: flex;
+  width: 88.1vw;
 
   &--catalog {
     margin-top: 0;
     margin-left: 3px;
     flex-wrap: wrap;
+    width: 66.3vw;
   }
 
   @include tablet {
     margin-top: 48px;
     margin-right: 4.2%;
-    width: 99.3%;
-    justify-content: space-between;
-
-    &--catalog {
-      width: 99.1%;
-    }
+    width: 93.7vw;
   }
 
   @include mobile {
     margin: auto;
     margin-top: 39px;
-    width: 97.3%;
+    width: 91.3vw;
+    justify-content: space-between;
   }
 }
 
@@ -54,12 +52,13 @@
 
   @include tablet {
     margin-right: 4.2%;
+    width: 47.7%;
     min-width: 47.7%;
 
     &--catalog {
-      margin-right: 0;
-      width: 30.7%;
-      min-width: 30.7%;
+      margin-right: 3.8%;
+      width: 29%;
+      min-width: 29%;
     }
   }
 
