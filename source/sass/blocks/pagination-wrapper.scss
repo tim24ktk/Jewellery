@@ -7,9 +7,14 @@
   justify-content: space-between;
   width: 64.4%;
 
+  &--catalog {
+    padding-bottom: 71px;
+  }
+
   @include tablet {
     margin-right: 41px;
     padding-top: 34px;
+    padding-bottom: 69px;
     width: 89.4%;
 
     &::before {

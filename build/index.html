@@ -96,7 +96,7 @@
         Login
       </a>
     </section>
-    <div class="header-top">
+    <div class="header-top header-top--tablet-main">
       <div class="header-top__wrapper container">
         <form class="form-search" action="https://echo.htmlacademy.ru" method="get">
           <label class="visually-hidden" for="search-id" aria-label="product search form">Search form</label>
@@ -108,7 +108,7 @@
             </svg>
           </button>
         </form>
-        <button class="header-top__button header-top__button--no-js" type="button" aria-label="Open menu button">
+        <button class="header-top__button header-top__button--tablet-main header-top__button--no-js" type="button" aria-label="Open menu button">
           <span class="visually-hidden">Open menu</span>
           <svg role="img" width="25" height="18">
             <use xlink:href="#icon-main-menu"></use>
@@ -119,7 +119,7 @@
             <use xlink:href="#icon-logo"></use>
           </svg>
         </a>
-        <ul class="user-navigation">
+        <ul class="user-navigation user-navigation--tablet-main">
           <li class="user-navigation__item user-navigation__item--none">
             <a href="login.html" class="user-navigation__item-link open-login">
               Login
@@ -237,7 +237,7 @@
           <li class="pagination__item pagination__item--active">1</li>
           <li class="pagination__item pagination__item--mobile">2</li>
           <li class="pagination__item pagination__item--mobile">3</li>
-          <li class="pagination__item">
+          <li class="pagination__item pagination__item--mobile-span">
             <span>of</span>
           </li>
           <li class="pagination__item pagination__item--tablet pagination__item--mobile">4</li>
@@ -248,8 +248,10 @@
     </section>
     <section class="blog">
       <div class="blog__wrapper container">
-        <h2 class="blog__title">Blog</h2>
-        <a href="#" class="blog__link">Read All</a>
+        <div class="blog__header">
+          <h2 class="blog__title">Blog</h2>
+          <a href="#" class="blog__link">Read All</a>
+        </div>
         <div class="blog__small-articles">
           <article class="small-article">
             <picture>

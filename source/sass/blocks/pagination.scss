@@ -4,25 +4,35 @@
   display: flex;
   justify-content: center;
 
+  &--main-card {
+    margin-left: 0;
+  }
+
   @include tablet {
     margin-top: -10px;
-
-    &--catalog {
-      margin-top: -2px;
-    }
+    margin-left: 1px;
   }
 
   @include mobile {
-    margin-top: -19px;
+    margin-top: -24px;
   }
 
   &--catalog {
-    padding-right: 35px;
+    margin: 0;
+    padding-right: 32px;
+    width: 16.2%;
+    justify-content: space-between;
+
+    @include tablet {
+      margin: 0;
+      margin-top: -2px;
+      margin-right: 31px;
+    }
 
     @include mobile {
       margin: 0 auto;
       padding: 0;
-      width: 54%;
+      width: 51%;
       display: flex;
       justify-content: space-between;
     }
@@ -38,13 +48,14 @@
 
     @include mobile {
       display: flex;
+      bottom: 4px;
     }
   }
 }
 
 .pagination__item {
   @include reset;
-  padding: 6px;
+  padding: 4px 6px;
   display: flex;
   align-items: center;
   font-family: $poppins;
@@ -70,12 +81,6 @@
     }
   }
 
-  &--mobile {
-    @include mobile {
-      display: none;
-    }
-  }
-
   &--card {
     display: flex;
     align-items: center;
@@ -95,16 +100,39 @@
   }
 
   @include mobile {
-    padding: 6px 9.5px;
+    padding: 6px 5px;
     display: flex;
     align-items: center;
     font-family: $poppins;
 
     @include font-size(16px, 500, 130%);
-    color: $placeholder-color;
+    color: $link-color;
+
+    &--card {
+      padding: 0;
+      color: $link-color;
+    }
+
+    &--catalog {
+      color: $placeholder-color;
+    }
   }
 
   &--active {
     color: $link-color;
+  }
+
+  &--mobile {
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &--mobile-span {
+    display: none;
+
+    @include mobile {
+      display: block;
+    }
   }
 }

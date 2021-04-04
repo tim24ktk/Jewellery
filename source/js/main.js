@@ -353,7 +353,8 @@ const onEscapeLoginKeydown = (evt) => {
 };
 
 if (closeLogin) {
-  closeLogin.addEventListener(`click`, () => {
+  closeLogin.addEventListener(`click`, (evt) => {
+    evt.preventDefault();
     loginModal.classList.remove(`login--active`);
     body.classList.remove(`body-position`);
 });

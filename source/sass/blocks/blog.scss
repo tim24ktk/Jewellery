@@ -8,10 +8,14 @@
   }
 }
 
+.blog__header {
+  width: 100%;
+}
+
 .blog__title {
   @include reset;
   margin: 0 auto;
-  margin-top: 107px;
+  margin-top: 111px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -39,7 +43,7 @@
   @include reset;
   margin: 0 auto;
   margin-top: 19px;
-  width: 100%;
+  width: 7%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,7 +64,7 @@
 
   &::before {
     position: absolute;
-    bottom: -5px;
+    bottom: -6px;
     right: auto;
     left: auto;
     content: "";
@@ -80,11 +84,12 @@
 
   @include tablet {
     padding-right: 1px;
-    max-width: max-content;
+    width: 11%;
   }
 
   @include mobile {
     font-size: 5vw;
+    width: 27%;
   }
 }
 

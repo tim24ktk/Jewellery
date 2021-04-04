@@ -25,6 +25,16 @@
 
   @include tablet {
     width: auto;
+
+    &--tablet-main {
+      margin-top: 6px;
+    }
+  }
+
+  @include mobile {
+    &--tablet-main {
+      margin-top: 5px;
+    }
   }
 }
 

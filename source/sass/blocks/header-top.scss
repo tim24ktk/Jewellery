@@ -23,6 +23,14 @@
   @include tablet {
     padding-bottom: 24px;
 
+    &--tablet-main {
+      padding-bottom: 25px;
+    }
+
+    &--card {
+      padding-bottom: 25px;
+    }
+
     &::before {
       display: none;
     }
@@ -67,6 +75,10 @@
 
     &--no-js {
       display: none;
+    }
+
+    &--tablet-main {
+      margin-top: 30px;
     }
   }
 
