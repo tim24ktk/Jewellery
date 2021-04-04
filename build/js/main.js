@@ -118,6 +118,63 @@
   const buttonLeft = document.querySelector(`.new__left-button`);
   const buttonRight = document.querySelector(`.new__right-button`);
 
+  /* вывод количества страниц */
+  const paginationList = document.querySelector(`.pagination`);
+  let deleter = 4;
+
+  if (tablet.matches || mobile.matches) {
+    deleter = 2;
+  };
+
+  for (let i = 1; i <= items.length / deleter; i++) {
+    let li = document.createElement(`li`);
+    li.classList.add(`pagination__item`);
+    li.textContent= i;
+    paginationList.appendChild(li);
+  };
+
+  let pageNumbers = document.querySelectorAll(`.pagination__item`);
+
+  let li = document.createElement(`li`);
+  li.classList.add(`pagination__item`, `pagination__item--span`);
+  li.textContent = `of`;
+  paginationList.appendChild(li);
+
+  li = document.createElement(`li`);
+  li.classList.add(`pagination__item`, `pagination__item--last-child`);
+  li.textContent = pageNumbers.length;
+  paginationList.appendChild(li);
+
+  for (let i = 0; i < pageNumbers.length; i++) {
+    pageNumbers[0].classList.add(`pagination__item--active`);
+  };
+
+  let index = 0;
+
+  const updateSelection = () => {
+    let active = document.querySelector(`li.pagination__item--active`);
+    if (active) {
+      active.classList.remove(`pagination__item--active`);
+    }
+    pageNumbers[index].classList.add(`pagination__item--active`);
+  };
+
+  const nextElem = () => {
+    index = (index + 1) % pageNumbers.length;
+    updateSelection();
+    if (index === pageNumbers.length - 1) {
+      buttonRight.removeEventListener('click', nextElem);
+    }
+  };
+
+  const previousElem = () => {
+    index = (index + pageNumbers.length - 1) % pageNumbers.length;
+    updateSelection();
+    if (index === 0) {
+      buttonLeft.removeEventListener('click', previousElem);
+    }
+  }
+
   let wrapperWidth; /* вычисляемая под конкретное разрешение ширина контейнера */
   let itemWidth; /* вычисляемая под конкретное разрешение ширина 1 слайда */
   let itemMarginRight; /* вычисляемый margin */
@@ -179,6 +236,7 @@
 
     transform -= step * count;
     list.style.transform = `translateX(` + transform + `%)`;
+    nextElem();
   };
 
   const buttonLeftClickHandler = () => {
@@ -190,6 +248,7 @@
     transform += step * count;
 
     list.style.transform = `translateX(` + transform + `%)`;
+    previousElem();
   };
 
   const setMobileTouch = () => {

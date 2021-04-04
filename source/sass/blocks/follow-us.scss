@@ -67,6 +67,10 @@
     @include tablet {
       bottom: -3px;
     }
+
+    @include mobile {
+      bottom: -5px;
+    }
   }
 
   @include tablet {

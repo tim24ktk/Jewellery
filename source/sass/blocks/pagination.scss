@@ -14,42 +14,7 @@
   }
 
   @include mobile {
-    margin-top: -24px;
-  }
-
-  &--catalog {
-    margin: 0;
-    padding-right: 32px;
-    width: 16.2%;
-    justify-content: space-between;
-
-    @include tablet {
-      margin: 0;
-      margin-top: -2px;
-      margin-right: 31px;
-    }
-
-    @include mobile {
-      margin: 0 auto;
-      padding: 0;
-      width: 51%;
-      display: flex;
-      justify-content: space-between;
-    }
-  }
-
-  &--card {
-    display: none;
-    position: absolute;
-    left: calc(50% - 6.5%);
-    bottom: 6px;
-    width: 13%;
-    justify-content: space-between;
-
-    @include mobile {
-      display: flex;
-      bottom: 4px;
-    }
+    margin-top: -19px;
   }
 }
 
@@ -64,71 +29,30 @@
   text-align: center;
   color: $placeholder-color;
 
-  &--tablet {
-    display: none;
-
-    @include tablet {
-      display: flex;
-    }
-  }
-
-  span {
-    display: none;
-
-    @include mobile {
-      padding-top: 5px;
-      display: block;
-    }
-  }
-
-  &--card {
-    display: flex;
-    align-items: center;
-    font-family: $poppins;
-
-    @include font-size(14px, 500, 130%);
-    text-align: center;
-    color: $link-color;
-
-    span {
-      padding-top: 0;
-    }
-  }
-
   @include tablet {
     padding: 6px 6.5px;
   }
 
   @include mobile {
+    display: none;
     padding: 6px 5px;
-    display: flex;
-    align-items: center;
-    font-family: $poppins;
-
-    @include font-size(16px, 500, 130%);
     color: $link-color;
-
-    &--card {
-      padding: 0;
-      color: $link-color;
-    }
-
-    &--catalog {
-      color: $placeholder-color;
-    }
   }
 
   &--active {
+    display: block;
     color: $link-color;
   }
 
-  &--mobile {
+  &--last-child {
+    display: none;
+
     @include mobile {
-      display: none;
+      display: block;
     }
   }
 
-  &--mobile-span {
+  &--span {
     display: none;
 
     @include mobile {

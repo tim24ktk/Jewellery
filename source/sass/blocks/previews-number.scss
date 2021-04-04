@@ -1,0 +1,24 @@
+.previews-number {
+  @include reset_for_list;
+  display: none;
+  position: absolute;
+  left: calc(50% - 6.5%);
+  bottom: 6px;
+  width: 13%;
+  justify-content: space-between;
+
+  @include mobile {
+    display: flex;
+  }
+}
+
+.previews-number__item {
+  @include reset;
+  display: flex;
+  align-items: center;
+  font-family: $poppins;
+
+  @include font-size(14px, 500, 130%);
+  text-align: center;
+  color: $link-color;
+}
