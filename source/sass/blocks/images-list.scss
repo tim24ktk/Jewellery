@@ -1,8 +1,8 @@
 .images-list {
   @include reset_for_list;
   margin-top: 41px;
-  margin-right: -50px;
-  margin-left: -6px;
+  margin-right: -60px;
+  margin-left: -16px;
   display: flex;
   flex-wrap: wrap;
 
@@ -26,7 +26,7 @@
   margin-right: 2vw;
 
   img {
-    margin-top: 24px;
+    margin-top: 1.73vw;
 
     @include tablet {
       margin-top: 13px;
@@ -84,13 +84,14 @@
 
     img {
       @include size(29.3vw, 30.3vw);
+      object-fit: fill;
 
       @include tablet {
         @include size(30.3vw, 31.2vw);
       }
 
       @include mobile {
-        @include size(45.3vw, 70.4vw);
+        @include size(100%, 92%);
       }
     }
 

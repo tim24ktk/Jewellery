@@ -48,6 +48,24 @@
     /* аккордеон */
     const accordionButtons = document.querySelectorAll(`.question-list__item-title`);
     const answers = document.querySelectorAll(`.question-list__item-answer`);
+    const ENTER = `Enter`;
+
+    if (accordionButtons) {
+      let activePanel;
+      accordionButtons.forEach(function(item) {
+        item.addEventListener('keydown', function(evt) {
+          if (evt.key === ENTER) {
+            this.classList.add(`question-list__item-title--active`);
+            this.nextElementSibling.classList.add('question-list__item-answer--active');
+            if (activePanel) {
+              activePanel.classList.remove(`question-list__item-title--active`);
+              activePanel.nextElementSibling.classList.remove('question-list__item-answer--active');
+            }
+            activePanel = (activePanel === this) ? 0 : this;
+          }
+        });
+      });
+    };
 
     if (answers) {
       answers.forEach((answer) => {
@@ -95,6 +113,17 @@
         item.addEventListener('click', function() {
           this.classList.toggle(`filter-list__item-title--active`);
           this.nextElementSibling.classList.toggle('filter-list__item-block--active');
+        });
+      });
+    };
+
+    if (filterButtons) {
+      filterButtons.forEach(function(item) {
+        item.addEventListener('keydown', function(evt) {
+          if (evt.key === ENTER) {
+            this.classList.toggle(`filter-list__item-title--active`);
+            this.nextElementSibling.classList.toggle('filter-list__item-block--active');
+          };
         });
       });
     };
@@ -255,7 +284,7 @@
       if (list) {
         list.addEventListener(`touchstart`, (evt) => {
           startX = evt.changedTouches[0].clientX;
-        });
+        }, {passive: true});
 
         list.addEventListener(`touchend`, (evt) => {
           let endX = evt.changedTouches[0].clientX;
@@ -266,7 +295,7 @@
           } else if (deltaX < -50) {
             buttonLeftClickHandler();
           }
-        });
+        }, {passive: true});
       }
     };
 

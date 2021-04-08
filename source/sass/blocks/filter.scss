@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
 
+
   @include tablet {
     display: none;
     position: fixed;
@@ -12,6 +13,7 @@
     justify-content: flex-start;
     flex-wrap: nowrap;
     padding-top: 26px;
+    overflow-y: auto;
     z-index: 1000;
 
     @include size(100%, 100vh);

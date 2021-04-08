@@ -97,7 +97,7 @@
     font-family: $poppins;
 
     @include font-size(14px, 500, 21px);
-    color: $placeholder-color;
+    color: $link-color;
     border: none;
     border-radius: 0;
     appearance: none;
@@ -120,6 +120,8 @@
     @include reset;
     margin-top: -24px;
     margin-right: 2px;
+    align-self: flex-end;
+    width: max-content;
     font-family: $poppins;
 
     @include font-size(12px, 500, 18px);

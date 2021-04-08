@@ -1,7 +1,7 @@
 .promo {
   display: flex;
   min-height: 33.9vw;
-  background-image: url("../img/promo@1x.png");
+  background-image: url("../img/promo@1x.jpg");
   background-repeat: no-repeat;
   background-color: $logo-color;
   background-size: 100% 34.9vw;
@@ -9,27 +9,28 @@
 
 
   @include retina {
-    background-image: url("../img/promo@2x.png");
+    background-image: url("../img/promo@2x.jpg");
   }
 
   @include tablet {
     min-height: 60.3vw;
-    background-image: url("../img/promo-tablet@1x.png");
+    background-image: url("../img/promo-tablet@1x.jpg");
     background-size: 100% 60.9vw;
     box-shadow: none;
 
     @include retina {
-      background-image: url("../img/promo-tablet@2x.png");
+      background-image: url("../img/promo-tablet@2x.jpg");
     }
   }
 
   @include mobile {
-    min-height: 144.8vw;
-    background-image: url("../img/promo-mobile@1x.png");
-    background-size: 100% 144.9vw;
+    min-height: 463px;
+    background-image: url("../img/promo-mobile@1x.jpg");
+    background-size: 100% 463px;
+
 
     @include retina {
-      background-image: url("../img/promo-mobile@2x.png");
+      background-image: url("../img/promo-mobile@2x.jpg");
     }
   }
 
@@ -37,7 +38,7 @@
     flex-direction: column;
     align-items: center;
     min-height: 19.15vw;
-    background-image: url("../img/promo-catalog@1x.png");
+    background-image: url("../img/promo-catalog@1x.jpg");
     box-shadow: none;
 
     .promo__title {
@@ -59,26 +60,26 @@
     }
 
     @include retina {
-      background-image: url("../img/promo-catalog@2x.png");
+      background-image: url("../img/promo-catalog@2x.jpg");
     }
 
     @include tablet {
       min-height: 34vw;
-      background-image: url("../img/promo-tablet-catalog@1x.png");
+      background-image: url("../img/promo-tablet-catalog@1x.jpg");
       background-size: 100% 60.9vw;
 
       @include retina {
-        background-image: url("../img/promo-table-catalogt@2x.png");
+        background-image: url("../img/promo-table-catalogt@2x.jpg");
       }
     }
 
     @include mobile {
       min-height: 81.6vw;
-      background-image: url("../img/promo-mobile-catalog@1x.png");
+      background-image: url("../img/promo-mobile-catalog@1x.jpg");
       background-size: 100% 81.9vw;
 
       @include retina {
-        background-image: url("../img/promo-mobile-catalog@2x.png");
+        background-image: url("../img/promo-mobile-catalog@2x.jpg");
       }
     }
   }
@@ -117,13 +118,13 @@
   }
 
   @include mobile {
-    margin-top: 58.1vw;
+    margin-top: 185px;
     padding-right: 0;
-    font-size: 11.85vw;
+    font-size: 38px;
     line-height: 148%;
 
     span {
-      font-size: 9.6vw;
+      font-size: 34px;
       line-height: 70%;
     }
   }

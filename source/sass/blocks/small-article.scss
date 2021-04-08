@@ -3,7 +3,6 @@
   margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
-  height: 22vw;
   background-color: $article-background;
 
   img {
@@ -17,6 +16,10 @@
     @include mobile {
       @include size(91vw, 80vw);
     }
+  }
+
+  picture {
+    line-height: 0;
   }
 
   &--reverse {
@@ -51,11 +54,7 @@
 }
 
 .small-article__wrapper {
-  margin-top: -11px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
+  padding: 66px 15px;
   width: 20.8vw;
 
   time {
@@ -108,6 +107,7 @@
     margin-right: auto;
     margin-left: auto;
     display: flex;
+    width: max-content;
     justify-content: center;
     font-family: $poppins;
 
@@ -146,12 +146,14 @@
 
   @include tablet {
     margin-top: -7px;
+    padding: 75px 15px;
     width: 44.1vw;
   }
 
   @include mobile {
     margin: auto;
     margin-top: 12vw;
-    width: 52.1vw;
+    padding: 6px 15px;
+    width: 60.1vw;
   }
 }

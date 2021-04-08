@@ -7,6 +7,7 @@
     display: none;
     flex-wrap: wrap;
     background-color: $logo-color;
+    overflow-y: auto;
 
     &--no-js {
       position: inherit;
