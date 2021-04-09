@@ -37,7 +37,7 @@
   @include tablet {
     margin-bottom: 50px;
 
-    @include size(98.6%, 39.1vw);
+    @include size(98.6%, auto);
   }
 
   @include mobile {
