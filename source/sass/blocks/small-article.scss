@@ -45,7 +45,7 @@
     margin-bottom: 40px;
     flex-direction: column;
 
-    @include size(96.4%, 160vw);
+    @include size(96.4%, auto);
   }
 }
 
@@ -54,11 +54,14 @@
 }
 
 .small-article__wrapper {
-  padding: 66px 15px;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 25px;
   width: 20.8vw;
 
   time {
     @include reset;
+    margin-top: -10px;
     display: flex;
     justify-content: center;
     font-family: $poppins;
@@ -145,7 +148,6 @@
   }
 
   @include tablet {
-    margin-top: -7px;
     padding: 75px 15px;
     width: 44.1vw;
   }
@@ -153,7 +155,8 @@
   @include mobile {
     margin: auto;
     margin-top: 12vw;
-    padding: 6px 15px;
+    padding: 15px;
+    padding-bottom: 55px;
     width: 60.1vw;
   }
 }
